@@ -6,13 +6,9 @@
 
 1. Double press shift to Caps Lock
 2. Caps Lock to Escape, hold for Hyper(Control_R)
-3. Fake Vim : Hyper - h/j/k/l to Cursor Left/Down/Up/Right
+3. Fake Vim : Hyper + h/j/k/l to Cursor Left/Down/Up/Right
+4. Specify Input Source: Hyper + z/x/c to specify input source as Japanese(Kotoeri)/English(US)/Chinese(Sougou Pinyin)
 
-...
-
-### Future Features
-
-1. Hot key to specify input source
 
 ### Set up
 
@@ -23,14 +19,13 @@
     git clone https://github.com/15cm/keyboard.git
     ln -s $PWD/keyboard/Karabiner/private.xml ~/Library/Application Support/Karabiner
     ```
-
-...
+3. Click `Reload XML` on 'Change Key' Board of Karabiner
 
 ## Dependencies
 
 * [Karabiner](https://pqrs.org/osx/karabiner/)
 * [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 
-## Document
+## Reference
 
 - [private.xml Reference Manual](https://pqrs.org/osx/karabiner/xml.html.en#modifier)

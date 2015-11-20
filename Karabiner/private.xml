@@ -7,21 +7,28 @@
         <item>
             <appendix>OS X doesn't have a native Hyper key. Let's define Hyper as Virtual key: MY_HYPER.</appendix>
             <appendix>With a new modifier key defined, we open a whole world of possibilities.</appendix>
+
+            <!-- F19 to Hyper BEGIN -->
             <item>
-                <name>F19(Caps Lock) to Escape or Hyper(Control_R)</name>
+                <name>F19(Caps Lock) to Escape or Hold for Hyper(Control_R)</name>
                 <identifier>com.15cm.f19_hyper</identifier>
                 <autogen>
                     --KeyOverlaidModifier-- KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE
                 </autogen>
             </item>
+            <!-- F19 to Hyper END -->
+
+            <!-- Double Press for CapsLock BEGIN -->
             <item>
-                <name>Double-tap Left Shift for CapsLock</name>
-                <identifier>com.jasonrudolph.double_lshift_to_caps</identifier>
+                <name>Double-tap Shift_L for CapsLock</name>
+                <identifier>com.jasonrudolph.double_shiftL_to_capslock</identifier>
                 <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
             </item>
+            <!-- Double Press for CapsLock END -->
 
+            <!-- Fake Vim BEGIN -->
             <item>
-                <name>Hyper-h/j/k/l for Cursor Left/Down/Up/Right</name>
+                <name>Hyper + h/j/k/l to Cursor Left/Down/Up/Right</name>
                 <identifier>com.15cm.hyper_hjkl_for_cursor_left_down_up_right</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
@@ -36,6 +43,43 @@
                     __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
                 </autogen>
             </item>
+            <!-- Fake Vim END -->
+
+            <!-- Change input source by Hyper + Option_L BEGIN-->
+            <vkchangeinputsourcedef>
+                <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_US</name>
+                <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
+            </vkchangeinputsourcedef>
+            <vkchangeinputsourcedef>
+                <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS</name>
+                <inputsourceid_equal>com.sogou.inputmethod.sogou.pinyin</inputsourceid_equal>
+            </vkchangeinputsourcedef>
+            <vkchangeinputsourcedef>
+                <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP</name>
+                <inputsourceid_equal>com.apple.inputmethod.Kotoeri.Japanese</inputsourceid_equal>
+            </vkchangeinputsourcedef>
+            <item>
+                <name>Change input source to US by Hyper + X</name>
+                <identifier>com.15cm.input_source_US</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::X, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                </autogen>
+            </item>
+            <item>
+                <name>Change input source to Chinese(Sougou) by Hyper + C</name>
+                <identifier>com.15cm.input_source_chs</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::C, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS
+                </autogen>
+            </item>
+            <item>
+                <name>Change input source to Japanese(Kotoeri) by Hyper + Z</name>
+                <identifier>com.15cm.input_source_jp</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::Z, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP
+                </autogen>
+            </item>
+            <!-- Change input source by Hyper + Option_L END-->
         </item>
     </item>
 </root>
