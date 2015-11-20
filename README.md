@@ -7,7 +7,7 @@
 1. Double press shift to Caps Lock
 2. Caps Lock to Escape, hold for Hyper(Control_R)
 3. Fake Vim : Hyper + h/j/k/l to Cursor Left/Down/Up/Right
-4. Specify Input Source: Hyper + z/x/c to specify input source as Japanese(Kotoeri)/English(US)/Chinese(Sougou Pinyin)
+4. Specify Input Source: Option_L + q/w/e to specify input source as English(US)/Chinese(Sougou Pinyin)/Japanese(Kotoeri)
 
 
 ### Set up
