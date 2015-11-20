@@ -1,18 +1,21 @@
 # Mac KeyBoard Configuration
 
-## Caps Lock to Escape or Control
+## Functions
 
-### Functions
+### Caps Lock to Escape or Control
 
 1. Double press shift to Caps Lock
 2. Caps Lock to Escape, hold for Hyper(Control_R)
 3. Fake Vim : Hyper + h/j/k/l to Cursor Left/Down/Up/Right
-4. Specify Input Source: Option_L + q/w/e to specify input source as English(US)/Chinese(Sougou Pinyin)/Japanese(Kotoeri)
+
+### Specify Input Source
+
+1. Specify Input Source: Option_L + q/w/e to specify input source as English(US)/Chinese(Sougou Pinyin)/Japanese(Kotoeri)
 
 
-### Set up
+## Set up
 
-1. Change Caps Lock to F19(keycode:80)
+1. Change Caps Lock to F19(keycode: 80)
 
 2. Clone this repo and create a soft link
     ```
@@ -29,4 +32,5 @@
 
 ## Reference
 
-- [private.xml Reference Manual](https://pqrs.org/osx/karabiner/xml.html.en#modifier)
+- [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard)
+- [private.xml Reference Manual](https://pqrkks.org/osx/karabiner/xml.html.en#modifier)
