@@ -4,7 +4,6 @@
         <!--      Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:      http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#hyper    -->
         <name>Hyper Mode</name>
 
-        <!-- <modifierdef>MY_HYPER</modifierdef> -->
         <item>
             <appendix>OS X doesn't have a native Hyper key. Let's define Hyper as Virtual key: MY_HYPER.</appendix>
             <appendix>With a new modifier key defined, we open a whole world of possibilities.</appendix>
@@ -12,11 +11,8 @@
                 <name>F19(Caps Lock) to Escape or Hyper(Control_R)</name>
                 <identifier>com.15cm.f19_hyper</identifier>
                 <autogen>
-                  --KeyOverlaidModifier--
-                  KeyCode::F19,
-                  KeyCode::CONTROL_R,
-                  KeyCode::ESCAPE
-              </autogen>
+                    --KeyOverlaidModifier-- KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE
+                </autogen>
             </item>
             <item>
                 <name>Double-tap Left Shift for CapsLock</name>
@@ -27,26 +23,18 @@
             <item>
                 <name>Hyper-h/j/k/l for Cursor Left/Down/Up/Right</name>
                 <identifier>com.15cm.hyper_hjkl_for_cursor_left_down_up_right</identifier>
-                    <autogen>
-                        __KeyToKey__
-                        KeyCode::H, ModifierFlag::CONTROL_R,
-                        KeyCode::CURSOR_LEFT
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__
-                        KeyCode::J, ModifierFlag::CONTROL_R,
-                        KeyCode::CURSOR_DOWN
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__
-                        KeyCode::K, ModifierFlag::CONTROL_R,
-                        KeyCode::CURSOR_UP
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__
-                        KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE,
-                        KeyCode::CURSOR_RIGHT
-                    </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, KeyCode::CURSOR_LEFT
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R, KeyCode::CURSOR_DOWN
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R, KeyCode::CURSOR_UP
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
+                </autogen>
             </item>
         </item>
     </item>
