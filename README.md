@@ -1,6 +1,6 @@
 # Mac KeyBoard Configuration
 
-## Functions
+## Features 
 
 ### Caps Lock to Escape or Control
 
