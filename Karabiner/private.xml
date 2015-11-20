@@ -24,13 +24,13 @@
                 <name>Hyper-h/j/k/l for Cursor Left/Down/Up/Right</name>
                 <identifier>com.15cm.hyper_hjkl_for_cursor_left_down_up_right</identifier>
                 <autogen>
-                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, KeyCode::CURSOR_LEFT
+                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
                 </autogen>
                 <autogen>
-                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R, KeyCode::CURSOR_DOWN
+                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN
                 </autogen>
                 <autogen>
-                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R, KeyCode::CURSOR_UP
+                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_UP
                 </autogen>
                 <autogen>
                     __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
