@@ -17,10 +17,13 @@
 ### Set up
 
 1. Change Caps Lock to F19(keycode:80)
-2. ```
+2.  
+
+    ```
     git clone https://github.com/15cm/keyboard.git
     ln -s $PWD/keyboard/Karabiner/private.xml ~/Library/Application Support/Karabiner
     ```
+
 ...
 
 ## Dependencies
