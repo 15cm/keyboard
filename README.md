@@ -12,6 +12,8 @@
 
 1. Specify Input Source: Option_L + q/w/e to specify input source as English(US)/Chinese(Sougou Pinyin)/Japanese(Kotoeri)
 
+    __Attention: `Wait before and after a modifier key event` on 'Parameters' board in Karabiner is recommended to set as `15ms` or longer. Otherwise input may be interpreted as US_en before switch of input source finished__)
+
 
 ## Set up
 
