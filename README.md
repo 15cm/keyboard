@@ -13,12 +13,13 @@
 ### Set up
 
 1. Change Caps Lock to F19(keycode:80)
-2.  
 
+2. Clone this repo and create a soft link
     ```
     git clone https://github.com/15cm/keyboard.git
     ln -s $PWD/keyboard/Karabiner/private.xml ~/Library/Application Support/Karabiner
     ```
+
 3. Click `Reload XML` on 'Change Key' Board of Karabiner
 
 ## Dependencies
