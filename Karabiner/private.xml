@@ -73,14 +73,14 @@
             <name>Change input source to Chinese(Sougou) by Option_L + W</name>
             <identifier>com.15cm.input_source_chs</identifier>
             <autogen>
-                __KeyToKey__ KeyCode::W, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS
+                __KeyToKey__ KeyCode::W, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS,KeyCode::VK_WAIT_100MS,KeyCode::VK_WAIT_100MS
             </autogen>
         </item>
         <item>
             <name>Change input source to Japanese(Kotoeri) by Option_L + E</name>
             <identifier>com.15cm.input_source_jp</identifier>
             <autogen>
-                __KeyToKey__ KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP
+                __KeyToKey__ KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP,KeyCode::VK_WAIT_100MS,KeyCode::VK_WAIT_100MS
             </autogen>
         </item>
     </item>

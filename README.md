@@ -1,6 +1,6 @@
 # Mac KeyBoard Configuration
 
-## Features 
+## Features
 
 ### Caps Lock to Escape or Control
 
@@ -35,4 +35,4 @@
 ## Reference
 
 - [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard)
-- [private.xml Reference Manual](https://pqrkks.org/osx/karabiner/xml.html.en#modifier)
+- [private.xml Reference Manual](https://pqrs.org/osx/karabiner/xml.html.en)
