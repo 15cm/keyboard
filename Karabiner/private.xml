@@ -3,21 +3,16 @@
     <item>
         <!--      Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:      http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#hyper    -->
         <name>Hyper Mode</name>
-
         <item>
             <appendix>OS X doesn't have a native Hyper key. Let's define Hyper as Virtual key: MY_HYPER.</appendix>
             <appendix>With a new modifier key defined, we open a whole world of possibilities.</appendix>
-
             <!-- F19 to Hyper BEGIN -->
             <item>
                 <name>F19(Caps Lock) to Escape or Hold for Hyper(Control_R)</name>
                 <identifier>com.15cm.f19_hyper</identifier>
-                <autogen>
-                    --KeyOverlaidModifier-- KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE
-                </autogen>
+                <autogen>                    --KeyOverlaidModifier-- KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE                </autogen>
             </item>
             <!-- F19 to Hyper END -->
-
             <!-- Double Press for CapsLock BEGIN -->
             <item>
                 <name>Double-tap Shift_L for CapsLock</name>
@@ -25,26 +20,16 @@
                 <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
             </item>
             <!-- Double Press for CapsLock END -->
-
             <!-- Fake Vim BEGIN -->
             <item>
                 <name>Hyper + h/j/k/l to Cursor Left/Down/Up/Right</name>
                 <identifier>com.15cm.hyper_hjkl_for_cursor_left_down_up_right</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_UP
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
-                </autogen>
+                <autogen>                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT                </autogen>
+                <autogen>                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN                </autogen>
+                <autogen>                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_UP                </autogen>
+                <autogen>                    __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT                </autogen>
             </item>
             <!-- Fake Vim END -->
-
         </item>
     </item>
     <!-- Specify input source by Option_L BEGIN-->
@@ -65,24 +50,51 @@
         <item>
             <name>Change input source to US by Option_L + Q</name>
             <identifier>com.15cm.input_source_US</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
-            </autogen>
+            <autogen>                __KeyToKey__ KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US            </autogen>
         </item>
         <item>
             <name>Change input source to Chinese(Sougou) by Option_L + W</name>
             <identifier>com.15cm.input_source_chs</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::W, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS,KeyCode::VK_WAIT_100MS,KeyCode::VK_WAIT_100MS
-            </autogen>
+            <autogen>                __KeyToKey__ KeyCode::W, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS,KeyCode::VK_WAIT_100MS,KeyCode::VK_WAIT_100MS            </autogen>
         </item>
         <item>
             <name>Change input source to Japanese(Kotoeri) by Option_L + E</name>
             <identifier>com.15cm.input_source_jp</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP,KeyCode::VK_WAIT_100MS,KeyCode::VK_WAIT_100MS
-            </autogen>
+            <autogen>                __KeyToKey__ KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP,KeyCode::VK_WAIT_100MS,KeyCode::VK_WAIT_100MS            </autogen>
         </item>
     </item>
     <!-- Specify input source by Option_L END-->
+
+        <!-- define external keyboard BEGIN-->
+        <devicevendordef>
+            <vendorname>CHERRY</vendorname>
+            <vendorid>0x046a</vendorid>
+        </devicevendordef>
+        <deviceproductdef>
+            <productname>EXTERNAL_KEYBOARD</productname>
+            <productid>0x0011</productid>
+        </deviceproductdef>
+        <!-- define external keyboard END-->
+
+        <!-- Adjustment for external keyboard BEGIN -->
+        <item>
+            <name>Swap Option with Command on external keyboard</name>
+            <item>
+                <name>Swap Option_L with Command_L</name>
+                <identifier>com.15cm.ex_swap_L_opt_cmd</identifier>
+                <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                <autogen>                __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L            </autogen>
+                <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+            </item>
+            <item>
+                <name>Swap Option_R with Command_R</name>
+                <identifier>com.15cm.ex_swap_R_opt_cmd</identifier>
+                <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                <autogen>                __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R            </autogen>
+                <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+            </item>
+        </item>
+        <!-- Adjustment for external keyboard END -->
+
+
 </root>

@@ -4,16 +4,19 @@
 
 ### Caps Lock to Escape or Control
 
-1. Double press shift to Caps Lock
-2. Caps Lock to Escape, hold for Hyper(Control_R)
-3. Fake Vim : Hyper + h/j/k/l to Cursor Left/Down/Up/Right
+- Double press shift to Caps Lock
+- Caps Lock to Escape, hold for Hyper(Control_R)
+- Fake Vim : Hyper + h/j/k/l to Cursor Left/Down/Up/Right
 
 ### Specify Input Source
 
-1. Specify Input Source: Option_L + q/w/e to specify input source as English(US)/Chinese(Sougou Pinyin)/Japanese(Kotoeri)
+- Specify Input Source: Option_L + q/w/e to specify input source as English(US)/Chinese(Sougou Pinyin)/Japanese(Kotoeri)
 
     __Attention: `Wait before and after a modifier key event` on 'Parameters' board in Karabiner is recommended to set as `15ms` or longer. Otherwise input may be interpreted as US_en before switch of input source finished__)
 
+### Adjustment for external keyboard
+
+- Swap Option with Command on external keyboard
 
 ## Set up
 
