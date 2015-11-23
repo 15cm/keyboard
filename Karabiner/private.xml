@@ -50,15 +50,23 @@
         <item>
             <name>Change input source to US(1st) by Option_L + Q</name>
             <identifier>com.15cm.switch_to_input_source_1st</identifier>
-            <autogen>                __KeyToKey__ KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::NONE,KeyCode::SHIFT_L, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US            </autogen>
+            <autogen>                __KeyToKey__ KeyCode::Q, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+                 KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,
+                 KeyCode::VK_WAIT_10MS,
+                 KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE,
+                 KeyCode::VK_WAIT_10MS,
+                 KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE,
+                 KeyCode::VK_WAIT_10MS,
+                 KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                        </autogen>
         </item>
         <item>
             <name>Change input source to input source 2nd by Option_L + W</name>
             <identifier>com.15cm.switch_to_input_source_2nd</identifier>
             <autogen>                __KeyToKey__ KeyCode::W, ModifierFlag::OPTION_L | ModifierFlag::NONE,
                  KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,
-                 KeyCode::VK_WAIT_100MS,
-                 KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE,KeyCode::SHIFT_L
+                 KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE,
+                 KeyCode::VK_WAIT_100MS
                         </autogen>
         </item>
         <item>
@@ -66,9 +74,9 @@
             <identifier>com.15cm.input_source_3rd</identifier>
             <autogen>                __KeyToKey__ KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::NONE,
                  KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,
-                 KeyCode::VK_WAIT_100MS,
+                 KeyCode::VK_WAIT_10MS,
                  KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE,
-                 KeyCode::VK_WAIT_100MS,
+                 KeyCode::VK_WAIT_10MS,
                  KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE
             </autogen>
         </item>

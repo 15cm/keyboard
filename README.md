@@ -11,7 +11,7 @@
 ### Specify Input Source
 
 - Specify Input Source: Option_L + q/w/e to specify input source 1/2/3
-    __Attention:__ This feature is implemented by `Select next source in input menu` Shortcuts of OS X. Here I set it as cmd+ctrl+F11. Besides, since the buffer cannot be clean when change from input source like Chinese, `shift` is used to change the input method between Chinese and English. Therefore some problem may exists in this feature.   
+    __Attention:__ This feature is implemented by `Select next source in input menu` Shortcuts of OS X. Here I set it as cmd+ctrl+F11. Besides, since the input buffer cannot be clean when change from input source like Chinese,a 3rd input source is needed to flush the current buffer. Therefore if the number of your input source is not 3, some problem may occur when using this feature.   
 
 ### Adjustment for external keyboard
 
