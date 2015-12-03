@@ -14,8 +14,8 @@
 
 ### Specify Input Source
 
-- Specify Input Source: Option_L + a/s/d to specify input source 1/2/3
-    __Attention:__ This feature is implemented by `Select next source in input menu` Shortcuts of OS X. Here I set it as cmd+ctrl+F11. Besides, since the input buffer cannot be clean when change from input source like Chinese,a 3rd input source is needed to flush the current buffer. Therefore if the number of your input source is not 3, some problem may occur when using this feature.   
+- Specify Input Source: Option_L + a/s/d to specify input source 1st/2nd/3rd
+    __Attention:__ This feature is implemented by `Select next source in input menu` Shortcuts of OS X. Here I set it as F18(CMD_R + CTRL_L + F11 to F18 in case of conflict). Besides, since the input buffer cannot be clean when change from input source like Chinese,a 3rd input source(with buffer) is needed to flush the current buffer. Therefore if the number of your input source is more than 3, some problem may occur when using this feature.   
 
 ### Adjustment for external keyboard
 
@@ -39,7 +39,8 @@
 * [Karabiner](https://pqrs.org/osx/karabiner/)
 * [Seil](https://pqrs.org/osx/karabiner/seil.html.en)
 
-## Reference
+## Reference & Thanks To
 
 - [jasonrudolph/keyboard](https://github.com/jasonrudolph/keyboard)
 - [private.xml Reference Manual](https://pqrs.org/osx/karabiner/xml.html.en)
+- The idea of setting hotkey for switching input source to F18 is inspired by [Sylv](https://v2ex.com/member/Sylv) in [this post on V2EX](https://v2ex.com/t/205046)
