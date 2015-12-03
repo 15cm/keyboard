@@ -2,11 +2,15 @@
 
 ## Features
 
-### Caps Lock to Escape or Control
+### Caps Lock to Hyper Key
 
 - Double press shift to Caps Lock
 - Caps Lock to Escape, hold for Hyper(Control_R)
-- Fake Vim : Hyper + h/j/k/l to Cursor Left/Down/Up/Right
+
+#### Vim Emulator with Hyper
+
+- Hyper + h/j/k/l to Cursor Left/Down/Up/Right
+- Hyper + f/b to PgDn/PgUp
 
 ### Specify Input Source
 
@@ -15,7 +19,8 @@
 
 ### Adjustment for external keyboard
 
-- Swap Option with Command on external keyboard
+- Swap Option with Command on external keyboard (Adjust keyboard mapping for PC to for Mac)
+    __Attetion:__ This feature is implemented by specified the external keyboard on which "Swap Option with Command" takes effect. Therefore it's you should obtain information about your external keyboard by EventViewer(launched from the menu bar item of karabiner) and modify the corresponding code.
 
 ## Set up
 

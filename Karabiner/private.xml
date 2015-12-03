@@ -20,16 +20,25 @@
                 <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
             </item>
             <!-- Double Press for CapsLock END -->
-            <!-- Fake Vim BEGIN -->
+            <!-- Vim Emulator BEGIN -->
             <item>
-                <name>Hyper + h/j/k/l to Cursor Left/Down/Up/Right</name>
-                <identifier>com.15cm.hyper_hjkl_for_cursor_left_down_up_right</identifier>
-                <autogen>                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT                </autogen>
-                <autogen>                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN                </autogen>
-                <autogen>                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_UP                </autogen>
-                <autogen>                    __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT                </autogen>
+                <appendix>Vim Emulator With Hyper Key</appendix>
+                <item>
+                    <name>Hyper + h/j/k/l to Cursor Left/Down/Up/Right</name>
+                    <identifier>com.15cm.hyper_hjkl_for_cursor_ldur</identifier>
+                    <autogen>                    __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT                </autogen>
+                    <autogen>                    __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN                </autogen>
+                    <autogen>                    __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_UP                </autogen>
+                    <autogen>                    __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT                </autogen>
+                </item>
+                <item>
+                    <name>Hyper + f/b to PgDn/PgUp</name>
+                    <identifier>com.15cm.hyper_fb_for_pgUppgDn</identifier>
+                    <autogen>                    __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEDOWN                </autogen>
+                    <autogen>                    __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEUP                </autogen>
+                </item>
             </item>
-            <!-- Fake Vim END -->
+            <!-- Vim Emulator END -->
         </item>
     </item>
     <!-- Specify input source by Option_L BEGIN-->
