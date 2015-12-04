@@ -107,10 +107,10 @@
         <item>
             <appendix>It's annoying that we have to focus on what input source we are using now</appendix>
             <appendix>when switching language we type in.</appendix>
-            <appendix>This hotkeys allows us to easily switch between or sepcify our input sources</appendix>
+            <appendix>These hotkeys allow us to easily switch between or sepcify our input sources</appendix>
             <item>
                 <name>Shift to swich between English and Chinese</name>
-                <appendix>(You'd better Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before beforehand)</appendix>
+                <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
                 <identifier>com.15-cm.shift_switch_en_zh</identifier>
                 <block>
                     <inputsource_only>EN</inputsource_only>
