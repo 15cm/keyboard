@@ -123,7 +123,7 @@
                     <autogen>
                         __KeyOverlaidModifier__ KeyCode::SHIFT_L, KeyCode::VK_LAZY_SHIFT_L,
                         <!-- the same as 'switch_to_input_source_1st' -->
-                        KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                        KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
                 </block>
             </item>
@@ -141,7 +141,7 @@
                     <name>Change input source to EN(1st) by Option_L + A</name>
                     <identifier>com.15-cm.switch_to_input_source_1st</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
                 </item>
                 <item>
