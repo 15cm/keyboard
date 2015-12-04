@@ -11,17 +11,29 @@
                 <name>F19(Caps Lock) to Escape or Hold for Hyper(Control_R)</name>
                 <identifier>com.15-cm.f19_hyper</identifier>
                 <autogen>
-                    --KeyOverlaidModifier-- KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE
+                    __KeyOverlaidModifier__ KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE
                 </autogen>
             </item>
             <!-- F19 to Hyper END -->
             <!-- Double Press for CapsLock BEGIN -->
             <item>
-                <name>Double-tap Shift_L for CapsLock</name>
-                <identifier>com.jasonrudolph.double_shiftL_to_capslock</identifier>
-                <autogen>__DoublePressModifier__ KeyCode::SHIFT_L, KeyCode::SHIFT_L, KeyCode::CAPSLOCK</autogen>
+                <name>Double-tap Shift_R for CapsLock</name>
+                <identifier>com.15-cm.double_shiftR_to_capslock</identifier>
+                <autogen>__DoublePressModifier__ KeyCode::SHIFT_R, KeyCode::SHIFT_R, KeyCode::CAPSLOCK</autogen>
             </item>
             <!-- Double Press for CapsLock END -->
+            <!-- editors define BEGIN -->
+            <appdef>
+                <appname>EDITOR</appname>
+                <equal>com.runningwithcrayons.Alfred-2</equal>
+                <equal>com.github.atom</equal>
+                <prefix>com.sublimetext</prefix>
+                <prefix>com.jetbrains</prefix>
+                <equal>com.google.android.studio</equal>
+                <equal>com.googlecode.iterm2</equal>
+                <equal>com.apple.com.Terminal</equal>
+            </appdef>
+            <!-- editors define END -->
             <!-- Vim Emulator BEGIN -->
             <item>
                 <appendix>Vim Emulator With Hyper Key</appendix>
@@ -43,65 +55,113 @@
                 </item>
                 <item>
                     <name>Hyper + f/b to PgDn/PgUp</name>
+                    <appendix>(Disabled in terminal and text edtitor like environment)</appendix>
                     <identifier>com.15-cm.hyper_fb_for_pgUppgDn</identifier>
-                    <autogen>
-                        __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEDOWN
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEUP
-                    </autogen>
+                    <block>
+                        <not>EDITOR</not>
+                        <autogen>
+                            __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEDOWN
+                        </autogen>
+                        <autogen>
+                            __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEUP
+                        </autogen>
+                    </block>
                 </item>
             </item>
             <!-- Vim Emulator END -->
         </item>
     </item>
     <!-- Specify input source by Option_L BEGIN-->
-    <item>
-        <name>Specify Input Source</name>
-        <vkchangeinputsourcedef>
-            <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_US</name>
-            <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
-        </vkchangeinputsourcedef>
-        <!-- <vkchangeinputsourcedef>
-        <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS</name>
-        <inputsourceid_equal>com.sogou.inputmethod.sogou.pinyin</inputsourceid_equal>
-    </vkchangeinputsourcedef>
+    <!-- define input source BEGIN-->
+    <inputsourcedef>
+        <name>EN</name>
+        <languagecode>en</languagecode>
+    </inputsourcedef>
+    <inputsourcedef>
+        <name>CHS</name>
+        <languagecode>zh-Hans</languagecode>
+    </inputsourcedef>
+    <inputsourcedef>
+        <name>JP</name>
+        <languagecode>ja</languagecode>
+    </inputsourcedef>
+    <!-- define input source END -->
+    <!-- define VK to change input source BEGIN -->
     <vkchangeinputsourcedef>
-        <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP</name>
-        <inputsourceid_equal>com.apple.inputmethod.Kotoeri.Japanese</inputsourceid_equal>
-    </vkchangeinputsourcedef> -->
+        <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_US</name>
+        <languangecode>en</languangecode>
+        <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
+    </vkchangeinputsourcedef>
+    <!-- <vkchangeinputsourcedef>
+    <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS</name>
+    <languagecode>zh-Hans</languagecode>
+    <inputsourceid_equal>com.baidu.inputmethod.BaiduIM.pinyin</inputsourceid_equal>
+</vkchangeinputsourcedef> -->
+    <!-- <vkchangeinputsourcedef>
+<name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP</name>
+<inputsourceid_equal>com.apple.inputmethod.Kotoeri.Japanese</inputsourceid_equal>
+</vkchangeinputsourcedef> -->
+    <!-- define VK to change input source END -->
+    <item>
+        <name>Easily Change Input Source</name>
         <item>
-            <name>Control_L + Command_R + F11 to F18(F18: set as system hotkey to switch input source)</name>
-            <identifier>com.15-cm.ctrl_l_command_r_f11_to_f18</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
-            </autogen>
-        </item>
-        <item>
-            <name>Change input source to US(1st) by Option_L + A</name>
-            <identifier>com.15-cm.switch_to_input_source_1st</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18,
-                <!-- KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R |  ModifierFlag::NONE, -->
-                KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
-            </autogen>
-        </item>
-        <item>
-            <name>Change input source to input source 2nd by Option_L + S</name>
-            <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
-            </autogen>
-        </item>
-        <item>
-            <name>Change input source to input source 3rd by Option_L + D</name>
-            <identifier>com.15-cm.input_source_3rd</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
-            </autogen>
+            <appendix>It's annoying that we have to focus on what input source we are using now</appendix>
+            <appendix>when switching language we type in.</appendix>
+            <appendix>This hotkeys allows us to easily switch between or sepcify our input sources</appendix>
+            <item>
+                <name>Shift to swich between English and Chinese</name>
+                <appendix>(You'd better Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before beforehand)</appendix>
+                <identifier>com.15-cm.shift_switch_en_zh</identifier>
+                <block>
+                    <inputsource_only>EN</inputsource_only>
+                    <autogen>
+                        __KeyOverlaidModifier__ KeyCode::SHIFT_L, KeyCode::VK_LAZY_SHIFT_L, KeyCode::F18
+                    </autogen>
+                </block>
+                <block>
+                    <inputsource_only>CHS</inputsource_only>
+                    <autogen>
+                        __KeyOverlaidModifier__ KeyCode::SHIFT_L, KeyCode::VK_LAZY_SHIFT_L,
+                        <!-- the same as 'switch_to_input_source_1st' -->
+                        KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                    </autogen>
+                </block>
+            </item>
+            <item>
+                <name>Specify Input Source</name>
+                <item>
+                    <name>Control_L + Command_R + F11 to F18(F18: set as system hotkey to switch input source)</name>
+                    <appendix>(This hotkey must be enabled as the following hotkeys are all based on F18, which is set as system shortcut to switch input source)</appendix>
+                    <identifier>com.15-cm.ctrl_l_command_r_f11_to_f18</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to EN(1st) by Option_L + A</name>
+                    <identifier>com.15-cm.switch_to_input_source_1st</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to input source 2nd by Option_L + S</name>
+                    <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to input source 3rd by Option_L + D</name>
+                    <identifier>com.15-cm.input_source_3rd</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                    </autogen>
+                </item>
+            </item>
+            <!-- Specify input source by Option_L END-->
         </item>
     </item>
-    <!-- Specify input source by Option_L END-->
     <!-- define external keyboard BEGIN-->
     <devicevendordef>
         <vendorname>CHERRY</vendorname>
