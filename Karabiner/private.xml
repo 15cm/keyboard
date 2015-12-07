@@ -109,19 +109,19 @@
             <appendix>when switching language we type in.</appendix>
             <appendix>These hotkeys allow us to easily switch between or sepcify our input sources</appendix>
             <item>
-                <name>Shift_R to swich between English and Chinese</name>
+                <name>Shift_L to swich between English and Chinese</name>
                 <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
                 <identifier>com.15-cm.shift_switch_en_zh</identifier>
                 <block>
                     <inputsource_only>EN</inputsource_only>
                     <autogen>
-                        __KeyOverlaidModifier__ KeyCode::SHIFT_R, KeyCode::VK_LAZY_SHIFT_R, KeyCode::F18
+                        __KeyOverlaidModifier__ KeyCode::SHIFT_L, KeyCode::VK_LAZY_SHIFT_L, KeyCode::F18
                     </autogen>
                 </block>
                 <block>
                     <inputsource_only>CHS</inputsource_only>
                     <autogen>
-                        __KeyOverlaidModifier__ KeyCode::SHIFT_R, KeyCode::VK_LAZY_SHIFT_R,
+                        __KeyOverlaidModifier__ KeyCode::SHIFT_L, KeyCode::VK_LAZY_SHIFT_L,
                         <!-- the same as 'switch_to_input_source_1st' -->
                         KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
