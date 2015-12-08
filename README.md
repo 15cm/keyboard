@@ -5,7 +5,7 @@
 ### Caps Lock to Hyper Key
 
 - Caps Lock to Escape, hold for Hyper(Control_R)
-- Double press Shift_R to Caps Lock
+- Control_R to Caps Lock
 
 #### Vim Emulator with Hyper
 
@@ -16,7 +16,7 @@
 ### Easily Change Input Source
 
 - Switch Input Method:
-    - Shift_L to switch between English and Chinese (Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before enable this hotkey)
+    - Shift_R to switch between English and Chinese (Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before enable this hotkey)
 
 - Specify Input Source: Option_L + a/s/d to specify input source 1st/2nd/3rd
 
