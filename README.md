@@ -7,11 +7,9 @@
 - Caps Lock to Escape, hold for Hyper(Control_R)
 - Control_R to Caps Lock
 
-#### Vim Emulator with Hyper
+### Vim Emulator
 
-- Hyper + h/j/k/l to Cursor Left/Down/Up/Right
-- Hyper + f/b to PgDn/PgUp (disabled in Terminal, Text Editor and IDE
- (Atom,SublimeText,Terminal,ITerm2,Jetbrains,Android Studio))
+- Command_R + h/j/k/l to Cursor Left/Down/Up/Right
 
 ### Easily Change Input Source
 

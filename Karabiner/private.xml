@@ -37,44 +37,30 @@
                 <equal>com.happenapps.Quiver</equal>
             </appdef>
             <!-- editors define END -->
-            <!-- Vim Emulator BEGIN -->
-            <item>
-                <appendix>Vim Emulator With Hyper Key</appendix>
-                <item>
-                    <name>Hyper + h/j/k/l to Cursor Left/Down/Up/Right</name>
-                    <identifier>com.15-cm.hyper_hjkl_for_cursor_ldur</identifier>
-                    <autogen>
-                        __KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__ KeyCode::J, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__ KeyCode::K, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_UP
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__ KeyCode::L, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
-                    </autogen>
-                </item>
-                <item>
-                    <name>Hyper + f/b to PgDn/PgUp</name>
-                    <appendix>(Disabled in terminal and text edtitor like environment)</appendix>
-                    <identifier>com.15-cm.hyper_fb_for_pgUppgDn</identifier>
-                    <OPTION_L>
-                        <not>EDITOR</not>
-                        <autogen>
-                            __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEDOWN
-                        </autogen>
-                        <autogen>
-                            __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEUP
-                        </autogen>
-                    </block>
-                </item>
-            </item>
-            <!-- Vim Emulator END -->
         </item>
     </item>
 
+        <!-- Vim Emulator BEGIN -->
+        <item>
+            <name>Vim Emulation</name>
+            <item>
+                <name>Command_R + h/j/k/l to Cursor Left/Down/Up/Right</name>
+                <identifier>com.15-cm.hyper_hjkl_for_cursor_ldur</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::H, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::J, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::K, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_UP
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::L, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
+                </autogen>
+            </item>
+        </item>
+        <!-- Vim Emulator END -->
     <!-- Adjustment for external keyboard BEGIN -->
     <item>
         <name>Adjustment for external keyboard</name>
