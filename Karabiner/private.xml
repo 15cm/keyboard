@@ -228,6 +228,88 @@
                 __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::COMMAND_R, KeyCode::SPACE
             </autogen>
             </item>
+            <item>
+            <device_only> DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                <name>Command_R + num to F1-F12</name>
+                <identifier>com.15-cm.minila_commandR_to_Fx</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::COMMAND_R, KeyCode::F1
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::COMMAND_R, KeyCode::F2
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::COMMAND_R, KeyCode::F3
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::COMMAND_R, KeyCode::F4
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::COMMAND_R, KeyCode::F5
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::COMMAND_R, KeyCode::F6
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::COMMAND_R, KeyCode::F7
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::COMMAND_R, KeyCode::F8
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::COMMAND_R, KeyCode::F9
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::COMMAND_R, KeyCode::F10
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::MINUS, ModifierFlag::COMMAND_R, KeyCode::F11
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::COMMAND_R, KeyCode::F12
+            </autogen>
+        </item>
+            <item>
+                <name>App + num to Bright/Volume... Control</name>
+                <identifier>com.15-cm.app_num_to_media_control</identifier>
+                <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::CAPSLOCK</autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::FN,ConsumerKeyCode::BRIGHTNESS_UP
+            </autogen>
+            <!-- <autogen>
+                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::FN, ConsumerKeyCode::EXPOSE_ALL
+            </autogen> -->
+            <!-- <autogen>
+                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::FN, ConsumerKeyCode::LAUNCHPAD
+            </autogen> -->
+            <!-- <autogen>
+                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::FN, ConsumerKeyCode::KEYBOARDLIGHT_LOW
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::FN, ConsumberKeyCode::KEYBOARDLIGHT_HIGH
+            </autogen> -->
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::FN, ConsumerKeyCode::MUSIC_PREV
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::FN,ConsumerKeyCode::MUSIC_PLAY
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::FN,ConsumerKeyCode::MUSIC_NEXT
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::FN,ConsumerKeyCode::VOLUME_MUTE
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::MINUS, ModifierFlag::FN,ConsumerKeyCode::VOLUME_DOWN
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::FN,ConsumerKeyCode::VOLUME_UP
+            </autogen>
+            </item>
         </item>
     <!-- Layout for flico minila air END-->
 </root>

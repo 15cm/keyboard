@@ -27,6 +27,9 @@
 
     __Attetion: This feature acts on specified external keyboard(Cherry 3494, Minila Air so far). Therefore you should obtain information about your external keyboard by EventViewer(launched from the menu bar item of karabiner) and modify the corresponding code.__
 
+### Layout for Minila Air
+
+
 ## Set up
 
 1. Change Caps Lock to F19(keycode: 80)
