@@ -26,7 +26,7 @@
 
             <!-- editors define BEGIN -->
             <appdef>
-                <appname>EDITOR</appname>
+                <appname>VIMBINDAPP</appname>
                 <equal>com.runningwithcrayons.Alfred-2</equal>
                 <equal>com.github.atom</equal>
                 <prefix>com.sublimetext</prefix>
@@ -34,7 +34,8 @@
                 <equal>com.google.android.studio</equal>
                 <equal>com.googlecode.iterm2</equal>
                 <equal>com.apple.com.Terminal</equal>
-                <equal>com.happenapps.Quiver</equal>
+                <equal>com.google.Chrome</equal>
+                <!-- <equal>com.happenapps.Quiver</equal> -->
             </appdef>
             <!-- editors define END -->
 
@@ -46,7 +47,7 @@
                 <item>
                     <name>Emacs binding(Hyper+P/N/B/F) for Up/Down/Left/Right</name>
                     <identifier>com.15-cm.emacs_binding_udlr</identifier>
-                    <not>EDITOR</not>
+                    <not>VIMBINDAPP</not>
                     <autogen>
                         __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_UP
                     </autogen>
@@ -260,6 +261,8 @@
             </item>
 
             <item>
+                <device_only>
+                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
                 <name>Up/Dn to Home/End</name>
                 <identifier>com.15-cm.up_dn_to_home_end</identifier>
                 <autogen>
@@ -313,6 +316,8 @@
                 </autogen>
             </item>
             <item>
+                <device_only>
+                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
                 <name>App + num to Bright/Volume... Control</name>
                 <identifier>com.15-cm.app_num_to_media_control</identifier>
                 <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::CAPSLOCK</autogen>
