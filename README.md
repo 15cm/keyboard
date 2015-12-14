@@ -16,7 +16,7 @@
 ### Easily Change Input Source
 
 - Switch Input Method:
-    - Shift_R to switch between English and Chinese (Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before enable this hotkey)
+    - Option_R to switch between English and Chinese (Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before enable this hotkey)
 
 - Specify Input Source: Option_L + a/s/d to specify input source 1st/2nd/3rd
 
@@ -27,7 +27,7 @@
 
 - Swap Option with Command on external keyboard (Adjust keyboard mapping for PC to for Mac)
 
-    __Attetion: This feature is implemented by specified the external keyboard on which `Swap Option with Command` takes effect. Therefore you should obtain information about your external keyboard by EventViewer(launched from the menu bar item of karabiner) and modify the corresponding code.__
+    __Attetion: This feature acts on specified external keyboard(Cherry 3494, Minila Air so far). Therefore you should obtain information about your external keyboard by EventViewer(launched from the menu bar item of karabiner) and modify the corresponding code.__
 
 ## Set up
 

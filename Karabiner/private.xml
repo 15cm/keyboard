@@ -15,13 +15,6 @@
                 </autogen>
             </item>
             <!-- F19 to Hyper END -->
-            <!-- Double Press for CapsLock BEGIN -->
-            <!-- <item>
-                <name>Double-tap Shift_R for CapsLock</name>
-                <identifier>com.15-cm.double_shiftR_to_capslock</identifier>
-                <autogen>__DoublePressModifier__ KeyCode::SHIFT_R, KeyCode::SHIFT_R, KeyCode::CAPSLOCK</autogen>
-            </item> -->
-            <!-- Double Press for CapsLock END -->
 
             <!-- CONTROL_R to CapsLock BEGIN -->
             <item>
@@ -41,6 +34,7 @@
                 <equal>com.google.android.studio</equal>
                 <equal>com.googlecode.iterm2</equal>
                 <equal>com.apple.com.Terminal</equal>
+                <equal>com.happenapps.Quiver</equal>
             </appdef>
             <!-- editors define END -->
             <!-- Vim Emulator BEGIN -->
@@ -66,7 +60,7 @@
                     <name>Hyper + f/b to PgDn/PgUp</name>
                     <appendix>(Disabled in terminal and text edtitor like environment)</appendix>
                     <identifier>com.15-cm.hyper_fb_for_pgUppgDn</identifier>
-                    <block>
+                    <OPTION_L>
                         <not>EDITOR</not>
                         <autogen>
                             __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R | ModifierFlag::NONE, KeyCode::PAGEDOWN
@@ -80,6 +74,40 @@
             <!-- Vim Emulator END -->
         </item>
     </item>
+
+    <!-- Adjustment for external keyboard BEGIN -->
+    <item>
+        <name>Adjustment for external keyboard</name>
+        <item>
+            <name>Swap Option_L with Command_L</name>
+            <identifier>com.15-cm.ex_swap_L_opt_cmd</identifier>
+            <device_only> DeviceVendor::CHERRY,DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <autogen>
+                __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+        </item>
+        <item>
+            <name>Swap Option_R with Command_R</name>
+            <identifier>com.15-cm.ex_swap_R_opt_cmd</identifier>
+            <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <autogen>
+                __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+        </item>
+
+        <item>
+            <name>PC Application to Fn</name>
+            <identifier>com.15-cm.app_to_fn</identifier>
+            <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+             <autogen>
+                 __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::FN
+             </autogen>
+        </item>
+    </item>
+    <!-- Adjustment for external keyboard END -->
+
     <!-- Specify input source by Option_L BEGIN-->
     <!-- define input source BEGIN-->
     <inputsourcedef>
@@ -118,19 +146,19 @@
             <appendix>when switching language we type in.</appendix>
             <appendix>These hotkeys allow us to easily switch between or sepcify our input sources</appendix>
             <item>
-                <name>Shift_R to swich between English and Chinese</name>
+                <name>OPTION_R to swich between English and Chinese</name>
                 <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
-                <identifier>com.15-cm.shift_switch_en_zh</identifier>
+                <identifier>com.15-cm.cmdL_switch_en_zhs</identifier>
                 <block>
                     <inputsource_only>EN</inputsource_only>
                     <autogen>
-                        __KeyOverlaidModifier__ KeyCode::SHIFT_R, KeyCode::VK_LAZY_SHIFT_R, KeyCode::F18
+                        __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R, KeyCode::F18
                     </autogen>
                 </block>
                 <block>
                     <inputsource_only>CHS</inputsource_only>
                     <autogen>
-                        __KeyOverlaidModifier__ KeyCode::SHIFT_R, KeyCode::VK_LAZY_SHIFT_R,
+                        __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R,
                         <!-- the same as 'switch_to_input_source_1st' -->
                         KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
@@ -147,28 +175,28 @@
                     </autogen>
                 </item>
                 <item>
-                    <name>Change input source to EN(1st) by Option_L + A</name>
+                    <name>Change input source to EN(1st) by OPTION_L + A</name>
                     <identifier>com.15-cm.switch_to_input_source_1st</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
                 </item>
                 <item>
-                    <name>Change input source to input source 2nd by Option_L + S</name>
+                    <name>Change input source to input source 2nd by OPTION_L + S</name>
                     <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
                     </autogen>
                 </item>
                 <item>
-                    <name>Change input source to input source 3rd by Option_L + D</name>
+                    <name>Change input source to input source 3rd by OPTION_L + D</name>
                     <identifier>com.15-cm.input_source_3rd</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                     </autogen>
                 </item>
             </item>
-            <!-- Specify input source by Option_L END-->
+            <!-- Specify input source by OPTION_L END-->
         </item>
     </item>
     <!-- define external keyboard BEGIN-->
@@ -176,32 +204,44 @@
         <vendorname>CHERRY</vendorname>
         <vendorid>0x046a</vendorid>
     </devicevendordef>
+    <devicevendordef>
+        <vendorname>FLICO</vendorname>
+        <vendorid>0x0a5c</vendorid>
+    </devicevendordef>
     <deviceproductdef>
         <productname>EXTERNAL_KEYBOARD</productname>
         <productid>0x0011</productid>
+        <productid>0x8502</productid>
     </deviceproductdef>
     <!-- define external keyboard END-->
-    <!-- Adjustment for external keyboard BEGIN -->
-    <item>
-        <name>Swap Option with Command on external keyboard</name>
+
+    <!-- Layout for flico minila air BEGIN-->
         <item>
-            <name>Swap Option_L with Command_L</name>
-            <identifier>com.15-cm.ex_swap_L_opt_cmd</identifier>
-            <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Layout for Minila Air</name>
+            <item>
+            <device_only> DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                <name>Backquote to Delete</name>
+                <identifier>com.15-cm.minila_backquote_to_delete</identifier>
             <autogen>
-                __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
+                __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE
             </autogen>
-            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
-        </item>
-        <item>
-            <name>Swap Option_R with Command_R</name>
-            <identifier>com.15-cm.ex_swap_R_opt_cmd</identifier>
-            <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            </item>
+            <item>
+            <device_only> DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                <name>Esc to Backqoute</name>
+                <identifier>com.15-cm.minila_esc_to_backquote</identifier>
             <autogen>
-                __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
+                __KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE
             </autogen>
-            <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+            </item>
+            <item>
+            <device_only> DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                <name>Space(FN_L and FN_R) to Command_R</name>
+                <identifier>com.15-cm.minila_space_to_commandR</identifier>
+            <autogen>
+                __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::COMMAND_R, KeyCode::SPACE
+            </autogen>
+            </item>
         </item>
-    </item>
-    <!-- Adjustment for external keyboard END -->
+    <!-- Layout for flico minila air END-->
 </root>
