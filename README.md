@@ -7,9 +7,9 @@
 - Caps Lock to Escape, hold for Hyper(Control_R)
 - Control_R to Caps Lock
 
-### Vim Emulator
+### Emacs Emulator
 
-- Command_R + h/j/k/l to Cursor Left/Down/Up/Right
+- Hyper+P/N/B/F for Up/Down/Left/Right
 
 ### Easily Change Input Source
 
