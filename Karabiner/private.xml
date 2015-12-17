@@ -18,9 +18,11 @@
 
             <!-- CONTROL_R to CapsLock BEGIN -->
             <item>
-                <name>Control_R for CapsLock (press Control_R only)</name>
-                <identifier>com.15-cm.double_controlR_to_capslock</identifier>
-                <autogen>__KeyOverlaidModifier__ KeyCode::CONTROL_R, KeyCode::VK_LAZY_CONTROL_R, KeyCode::CAPSLOCK</autogen>
+                <name>Double press Shift_R to Capslock</name>
+                <identifier>com.15-cm.app_double_shiftR_to_capslock</identifier>
+                <autogen>
+                    __DoublePressModifier__ KeyCode::SHIFT_R, KeyCode::SHIFT_R, KeyCode::CAPSLOCK
+                </autogen>
             </item>
             <!-- CONTROL_R to CapsLock END -->
 
@@ -35,6 +37,9 @@
                 <equal>com.googlecode.iterm2</equal>
                 <equal>com.apple.com.Terminal</equal>
                 <equal>com.google.Chrome</equal>
+                <equal>com.apple.dt.Xcode</equal>
+                <euqal>org.rstudio.RStudio</euqal>
+                <equal>com.happenapps.Quiver</equal>
                 <!-- <equal>com.happenapps.Quiver</equal> -->
             </appdef>
             <!-- editors define END -->
@@ -45,15 +50,19 @@
             <item>
                 <name>Emacs Emulator</name>
                 <item>
-                    <name>Emacs binding(Hyper+P/N/B/F) for Up/Down/Left/Right</name>
-                    <identifier>com.15-cm.emacs_binding_udlr</identifier>
-                    <not>VIMBINDAPP</not>
+                    <name>Emacs binding(Hyper+P/N) for Up/Down</name>
+                    <identifier>com.15-cm.emacs_binding_ud</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_UP
                     </autogen>
                     <autogen>
                         __KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_DOWN
                     </autogen>
+                </item>
+                <item>
+                    <name>Emacs binding(Hyper+B/F) for Left/Right</name>
+                    <identifier>com.15-cm.emacs_binding_lr</identifier>
+                    <not>VIMBINDAPP</not>
                     <autogen>
                         __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_LEFT
                     </autogen>
@@ -320,7 +329,6 @@
                     DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
                 <name>App + num to Bright/Volume... Control</name>
                 <identifier>com.15-cm.app_num_to_media_control</identifier>
-                <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::CAPSLOCK</autogen>
                 <autogen>
                     __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
                 </autogen>
@@ -357,6 +365,15 @@
                 <autogen>
                     __KeyToKey__ KeyCode::EQUAL, ModifierFlag::FN,ConsumerKeyCode::VOLUME_UP
                 </autogen>
+            </item>
+
+            <item>
+                <name>Command_R to Fn</name>
+                <item>
+                    <name>Command_R + Shift_L + Delete to fn + Shift_L + Delete</name>
+                <identifier>com.15-cm.cmdR_to_fn</identifier>
+                <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
+                </item>
             </item>
         </item>
         <!-- Layout for flico minila air END-->
