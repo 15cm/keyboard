@@ -5,7 +5,7 @@
 ### Caps Lock to Hyper Key
 
 - Caps Lock to Escape, hold for Hyper(Control_R)
-- Control_R to Caps Lock
+- Double press Shift_R to Caps Lock
 
 ### Emacs Emulator
 
