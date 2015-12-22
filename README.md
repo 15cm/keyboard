@@ -16,7 +16,7 @@
 - Switch Input Method:
     - Option_R to switch between English and Chinese (Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before enable this hotkey)
 
-- Specify Input Source: Option_L + a/s/d to specify input source 1st/2nd/3rd
+- Specify Input Source: Command_R + a/s/d to specify input source 1st/2nd/3rd
 
     __Attention: This feature is implemented by `Select next source in input menu` Shortcuts of OS X.
     Here I set it as F18(CMD_R + CTRL_L + F11 -> F18 in case of conflict).__

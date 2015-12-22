@@ -196,24 +196,24 @@
                         </autogen>
                     </item>
                     <item>
-                        <name>Change input source to EN(1st) by OPTION_L + A</name>
+                        <name>Change input source to EN(1st) by COMMAND_R + A</name>
                         <identifier>com.15-cm.switch_to_input_source_1st</identifier>
                         <autogen>
-                            __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                            __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                         </autogen>
                     </item>
                     <item>
-                        <name>Change input source to input source 2nd by OPTION_L + S</name>
+                        <name>Change input source to input source 2nd by COMMAND_R + S</name>
                         <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
                         <autogen>
-                            __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
+                            __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
                         </autogen>
                     </item>
                     <item>
-                        <name>Change input source to input source 3rd by OPTION_L + D</name>
+                        <name>Change input source to input source 3rd by COMMAND_R + D</name>
                         <identifier>com.15-cm.input_source_3rd</identifier>
                         <autogen>
-                            __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                            __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                         </autogen>
                     </item>
                 </item>
@@ -327,8 +327,9 @@
             <item>
                 <device_only>
                     DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>App + num to Bright/Volume... Control</name>
+                <name>App to Fn</name>
                 <identifier>com.15-cm.app_num_to_media_control</identifier>
+                <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::PC_APPLICATION</autogen>
                 <autogen>
                     __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
                 </autogen>
