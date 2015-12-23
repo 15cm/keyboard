@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
+    <!-- define external keyboard BEGIN-->
+    <devicevendordef>
+        <vendorname>CHERRY</vendorname>
+        <vendorid>0x046a</vendorid>
+    </devicevendordef>
+    <devicevendordef>
+        <vendorname>FLICO</vendorname>
+        <vendorid>0x0a5c</vendorid>
+    </devicevendordef>
+    <deviceproductdef>
+        <productname>EXTERNAL_KEYBOARD</productname>
+        <productid>0x0011</productid>
+        <productid>0x8502</productid>
+    </deviceproductdef>
+    <!-- define external keyboard END-->
     <item>
         <!--      Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:      http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#hyper    -->
         <name>Hyper Mode</name>
@@ -44,37 +59,37 @@
             </appdef>
             <!-- editors define END -->
 
-                <!-- emacs emulator END -->
-            </item>
-            <!-- emacs emulator BEGIN -->
+            <!-- emacs emulator END -->
+        </item>
+        <!-- emacs emulator BEGIN -->
+        <item>
+            <name>Emacs Emulator</name>
             <item>
-                <name>Emacs Emulator</name>
-                <item>
-                    <name>Emacs binding(Hyper+P/N) for Up/Down</name>
-                    <identifier>com.15-cm.emacs_binding_ud</identifier>
-                    <autogen>
-                        __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_UP
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_DOWN
-                    </autogen>
-                </item>
-                <item>
-                    <name>Emacs binding(Hyper+B/F) for Left/Right</name>
-                    <identifier>com.15-cm.emacs_binding_lr</identifier>
-                    <not>VIMBINDAPP</not>
-                    <autogen>
-                        __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_LEFT
-                    </autogen>
-                    <autogen>
-                        __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
-                    </autogen>
-                </item>
+                <name>Emacs binding(Hyper+P/N) for Up/Down</name>
+                <identifier>com.15-cm.emacs_binding_ud</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_UP
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_DOWN
+                </autogen>
+            </item>
+            <item>
+                <name>Emacs binding(Hyper+B/F) for Left/Right</name>
+                <identifier>com.15-cm.emacs_binding_lr</identifier>
+                <not>VIMBINDAPP</not>
+                <autogen>
+                    __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_LEFT
+                </autogen>
+                <autogen>
+                    __KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
+                </autogen>
             </item>
         </item>
+    </item>
 
-        <!-- Vim Emulator BEGIN -->
-        <!-- <item>
+    <!-- Vim Emulator BEGIN -->
+    <!-- <item>
             <name>Vim Emulation</name>
             <item>
                 <name>Command_R + h/j/k/l to Cursor Left/Down/Up/Right</name>
@@ -93,289 +108,303 @@
                 </autogen>
             </item>
         </item> -->
-        <!-- Vim Emulator END -->
+    <!-- Vim Emulator END -->
 
-        <!-- Adjustment for external keyboard BEGIN -->
+    <!-- Adjustment for external keyboard BEGIN -->
+    <item>
+        <name>Adjustment for external keyboard</name>
         <item>
-            <name>Adjustment for external keyboard</name>
-            <item>
-                <name>Swap Option_L with Command_L</name>
-                <identifier>com.15-cm.ex_swap_L_opt_cmd</identifier>
-                <device_only>
-                    DeviceVendor::CHERRY,DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <autogen>
-                    __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
-                </autogen>
-                <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
-            </item>
-            <item>
-                <name>Swap Option_R with Command_R</name>
-                <identifier>com.15-cm.ex_swap_R_opt_cmd</identifier>
-                <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <autogen>
-                    __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
-                </autogen>
-                <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
-            </item>
-
-            <item>
-                <name>PC Application to Fn</name>
-                <identifier>com.15-cm.app_to_fn</identifier>
-                <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <autogen>
-                    __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::FN
-                </autogen>
-            </item>
+            <name>Swap Option_L with Command_L</name>
+            <identifier>com.15-cm.ex_swap_L_opt_cmd</identifier>
+            <device_only>
+                DeviceVendor::CHERRY,DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <autogen>
+                __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
         </item>
-        <!-- Adjustment for external keyboard END -->
+        <item>
+            <name>Swap Option_R with Command_R</name>
+            <identifier>com.15-cm.ex_swap_R_opt_cmd</identifier>
+            <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <autogen>
+                __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+        </item>
 
-        <!-- Specify input source by Option_L BEGIN-->
-        <!-- define input source BEGIN-->
-        <inputsourcedef>
-            <name>EN</name>
-            <languagecode>en</languagecode>
-        </inputsourcedef>
-        <inputsourcedef>
-            <name>CHS</name>
-            <languagecode>zh-Hans</languagecode>
-        </inputsourcedef>
-        <inputsourcedef>
-            <name>JP</name>
-            <languagecode>ja</languagecode>
-        </inputsourcedef>
-        <!-- define input source END -->
-        <!-- define VK to change input source BEGIN -->
-        <vkchangeinputsourcedef>
-            <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_US</name>
-            <languangecode>en</languangecode>
-            <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
-        </vkchangeinputsourcedef>
-        <!-- <vkchangeinputsourcedef>
+        <item>
+            <name>PC Application to Fn</name>
+            <identifier>com.15-cm.app_to_fn</identifier>
+            <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <autogen>
+                __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::FN
+            </autogen>
+        </item>
+    </item>
+    <!-- Adjustment for external keyboard END -->
+
+    <!-- Specify input source by Option_L BEGIN-->
+    <!-- define input source BEGIN-->
+    <inputsourcedef>
+        <name>EN</name>
+        <languagecode>en</languagecode>
+    </inputsourcedef>
+    <inputsourcedef>
+        <name>CHS</name>
+        <languagecode>zh-Hans</languagecode>
+    </inputsourcedef>
+    <inputsourcedef>
+        <name>JP</name>
+        <languagecode>ja</languagecode>
+    </inputsourcedef>
+    <!-- define input source END -->
+    <!-- define VK to change input source BEGIN -->
+    <vkchangeinputsourcedef>
+        <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_US</name>
+        <languangecode>en</languangecode>
+        <inputsourceid_equal>com.apple.keylayout.US</inputsourceid_equal>
+    </vkchangeinputsourcedef>
+    <!-- <vkchangeinputsourcedef>
     <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_CHS</name>
     <languagecode>zh-Hans</languagecode>
     <inputsourceid_equal>com.baidu.inputmethod.BaiduIM.pinyin</inputsourceid_equal>
 </vkchangeinputsourcedef> -->
-        <!-- <vkchangeinputsourcedef>
+    <!-- <vkchangeinputsourcedef>
 <name>KeyCode::VK_CHANGE_INPUTSOURCE_MY_JP</name>
 <inputsourceid_equal>com.apple.inputmethod.Kotoeri.Japanese</inputsourceid_equal>
 </vkchangeinputsourcedef> -->
-        <!-- define VK to change input source END -->
+    <!-- define VK to change input source END -->
+    <item>
+        <name>Easily Change Input Source</name>
         <item>
-            <name>Easily Change Input Source</name>
+            <appendix>It's annoying that we have to focus on what input source we are using now</appendix>
+            <appendix>when switching language we type in.</appendix>
+            <appendix>These hotkeys allow us to easily switch between or sepcify our input sources</appendix>
             <item>
-                <appendix>It's annoying that we have to focus on what input source we are using now</appendix>
-                <appendix>when switching language we type in.</appendix>
-                <appendix>These hotkeys allow us to easily switch between or sepcify our input sources</appendix>
-                <item>
-                    <name>OPTION_R to swich between English and Chinese</name>
-                    <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
-                    <identifier>com.15-cm.cmdL_switch_en_zhs</identifier>
-                    <block>
-                        <inputsource_only>EN</inputsource_only>
-                        <autogen>
-                            __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R, KeyCode::F18
-                        </autogen>
-                    </block>
-                    <block>
-                        <inputsource_only>CHS</inputsource_only>
-                        <autogen>
-                            __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R,
-                            <!-- the same as 'switch_to_input_source_1st' -->
-                            KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
-                        </autogen>
-                    </block>
-                </item>
-                <item>
-                    <name>Specify Input Source</name>
-                    <item>
-                        <name>Control_L + Command_R + F11 to F18(F18: set as system hotkey to switch input source)</name>
-                        <appendix>(This hotkey must be enabled as the following hotkeys are all based on F18, which is set as system shortcut to switch input source)</appendix>
-                        <identifier>com.15-cm.ctrl_l_command_r_f11_to_f18</identifier>
-                        <autogen>
-                            __KeyToKey__ KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
-                        </autogen>
-                    </item>
-                    <item>
-                        <name>Change input source to EN(1st) by COMMAND_R + A</name>
-                        <identifier>com.15-cm.switch_to_input_source_1st</identifier>
-                        <autogen>
-                            __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
-                        </autogen>
-                    </item>
-                    <item>
-                        <name>Change input source to input source 2nd by COMMAND_R + S</name>
-                        <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
-                        <autogen>
-                            __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
-                        </autogen>
-                    </item>
-                    <item>
-                        <name>Change input source to input source 3rd by COMMAND_R + D</name>
-                        <identifier>com.15-cm.input_source_3rd</identifier>
-                        <autogen>
-                            __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
-                        </autogen>
-                    </item>
-                </item>
-                <!-- Specify input source by OPTION_L END-->
+                <name>OPTION_R to swich between English and Chinese</name>
+                <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
+                <identifier>com.15-cm.cmdL_switch_en_zhs</identifier>
+                <block>
+                    <inputsource_only>EN</inputsource_only>
+                    <autogen>
+                        __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R, KeyCode::F18
+                    </autogen>
+                </block>
+                <block>
+                    <inputsource_only>CHS</inputsource_only>
+                    <autogen>
+                        __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R,
+                        <!-- the same as 'switch_to_input_source_1st' -->
+                        KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                    </autogen>
+                </block>
             </item>
+            <item>
+                <name>Specify Input Source</name>
+                <item>
+                    <name>Control_L + Command_R + F11 to F18(F18: set as system hotkey to switch input source)</name>
+                    <appendix>(This hotkey must be enabled as the following hotkeys are all based on F18, which is set as system shortcut to switch input source)</appendix>
+                    <identifier>com.15-cm.ctrl_l_command_r_f11_to_f18</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
+                    </autogen>
+                </item>
+
+                <!-- Specify Input Source BEGIN -->
+                <item>
+                    <name>Change input source to EN(1st) by COMMAND_R + A (For Minila Air)</name>
+                    <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                    <identifier>com.15-cm.switch_to_input_source_1st_minila</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to input source 2nd by COMMAND_R + S (For Minila Air)</name>
+                    <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                    <identifier>com.15-cm.switch_to_input_source_2nd_minila</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to input source 3rd by COMMAND_R + D (For Minila Air)</name>
+                    <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+                    <identifier>com.15-cm.input_source_3rd_minila</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to EN(1st) by OPTION_L + A (For other keyboard)</name>
+                    <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
+                    <identifier>com.15-cm.switch_to_input_source_1st</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to input source 2nd by OPTION_L + S (For other keyboard)</name>
+                    <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
+                    <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
+                    </autogen>
+                </item>
+                <item>
+                    <name>Change input source to input source 3rd by OPTION_L + D (For other keyboard)</name>
+                    <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
+                    <identifier>com.15-cm.input_source_3rd</identifier>
+                    <autogen>
+                        __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                    </autogen>
+                </item>
+            </item>
+            <!-- Specify Input Source END -->
         </item>
-        <!-- define external keyboard BEGIN-->
-        <devicevendordef>
-            <vendorname>CHERRY</vendorname>
-            <vendorid>0x046a</vendorid>
-        </devicevendordef>
-        <devicevendordef>
-            <vendorname>FLICO</vendorname>
-            <vendorid>0x0a5c</vendorid>
-        </devicevendordef>
-        <deviceproductdef>
-            <productname>EXTERNAL_KEYBOARD</productname>
-            <productid>0x0011</productid>
-            <productid>0x8502</productid>
-        </deviceproductdef>
-        <!-- define external keyboard END-->
+    </item>
 
-        <!-- Layout for flico minila air BEGIN-->
+    <!-- Layout for flico minila air BEGIN-->
+    <item>
+        <name>Layout for Minila Air</name>
         <item>
-            <name>Layout for Minila Air</name>
-            <item>
-                <device_only>
-                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>Backquote to Delete</name>
-                <identifier>com.15-cm.minila_backquote_to_delete</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE
-                </autogen>
-            </item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Backquote to Delete</name>
+            <identifier>com.15-cm.minila_backquote_to_delete</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE
+            </autogen>
+        </item>
 
-            <item>
-                <device_only>
-                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>Esc to Backqoute</name>
-                <identifier>com.15-cm.minila_esc_to_backquote</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE
-                </autogen>
-            </item>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Esc to Backqoute</name>
+            <identifier>com.15-cm.minila_esc_to_backquote</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE
+            </autogen>
+        </item>
 
-            <item>
-                <device_only>
-                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>Space(FN_L and FN_R) to Command_R</name>
-                <identifier>com.15-cm.minila_space_to_commandR</identifier>
-                <autogen>
-                    __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::COMMAND_R, KeyCode::SPACE
-                </autogen>
-            </item>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Space(FN_L and FN_R) to Command_R</name>
+            <identifier>com.15-cm.minila_space_to_commandR</identifier>
+            <autogen>
+                __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::COMMAND_R, KeyCode::SPACE
+            </autogen>
+        </item>
 
-            <item>
-                <device_only>
-                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>Up/Dn to Home/End</name>
-                <identifier>com.15-cm.up_dn_to_home_end</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::CURSOR_UP, KeyCode::HOME
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::CURSOR_DOWN, KeyCode::END
-                </autogen>
-            </item>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Up/Dn to Home/End</name>
+            <identifier>com.15-cm.up_dn_to_home_end</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::CURSOR_UP, KeyCode::HOME
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::CURSOR_DOWN, KeyCode::END
+            </autogen>
+        </item>
 
-            <item>
-                <device_only>
-                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>Command_R + num to F1-F12</name>
-                <identifier>com.15-cm.minila_commandR_to_Fx</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_1, ModifierFlag::COMMAND_R, KeyCode::F1
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_2, ModifierFlag::COMMAND_R, KeyCode::F2
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_3, ModifierFlag::COMMAND_R, KeyCode::F3
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_4, ModifierFlag::COMMAND_R, KeyCode::F4
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_5, ModifierFlag::COMMAND_R, KeyCode::F5
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_6, ModifierFlag::COMMAND_R, KeyCode::F6
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_7, ModifierFlag::COMMAND_R, KeyCode::F7
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_8, ModifierFlag::COMMAND_R, KeyCode::F8
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_9, ModifierFlag::COMMAND_R, KeyCode::F9
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_0, ModifierFlag::COMMAND_R, KeyCode::F10
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::MINUS, ModifierFlag::COMMAND_R, KeyCode::F11
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::EQUAL, ModifierFlag::COMMAND_R, KeyCode::F12
-                </autogen>
-            </item>
-            <item>
-                <device_only>
-                    DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                <name>App to Fn</name>
-                <identifier>com.15-cm.app_num_to_media_control</identifier>
-                <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::PC_APPLICATION</autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_2, ModifierFlag::FN,ConsumerKeyCode::BRIGHTNESS_UP
-                </autogen>
-                <!-- <autogen>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Command_R + num to F1-F12</name>
+            <identifier>com.15-cm.minila_commandR_to_Fx</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::COMMAND_R, KeyCode::F1
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::COMMAND_R, KeyCode::F2
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::COMMAND_R, KeyCode::F3
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::COMMAND_R, KeyCode::F4
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::COMMAND_R, KeyCode::F5
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::COMMAND_R, KeyCode::F6
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::COMMAND_R, KeyCode::F7
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::COMMAND_R, KeyCode::F8
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::COMMAND_R, KeyCode::F9
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::COMMAND_R, KeyCode::F10
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::MINUS, ModifierFlag::COMMAND_R, KeyCode::F11
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::COMMAND_R, KeyCode::F12
+            </autogen>
+        </item>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>App to Fn</name>
+            <identifier>com.15-cm.app_num_to_media_control</identifier>
+            <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::PC_APPLICATION</autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::FN,ConsumerKeyCode::BRIGHTNESS_UP
+            </autogen>
+            <!-- <autogen>
                 __KeyToKey__ KeyCode::KEY_3, ModifierFlag::FN, ConsumerKeyCode::EXPOSE_ALL
             </autogen> -->
-                <!-- <autogen>
+            <!-- <autogen>
                 __KeyToKey__ KeyCode::KEY_4, ModifierFlag::FN, ConsumerKeyCode::LAUNCHPAD
             </autogen> -->
-                <!-- <autogen>
+            <!-- <autogen>
                 __KeyToKey__ KeyCode::KEY_5, ModifierFlag::FN, ConsumerKeyCode::KEYBOARDLIGHT_LOW
             </autogen>
             <autogen>
                 __KeyToKey__ KeyCode::KEY_6, ModifierFlag::FN, ConsumberKeyCode::KEYBOARDLIGHT_HIGH
             </autogen> -->
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_7, ModifierFlag::FN, ConsumerKeyCode::MUSIC_PREV
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_8, ModifierFlag::FN,ConsumerKeyCode::MUSIC_PLAY
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_9, ModifierFlag::FN,ConsumerKeyCode::MUSIC_NEXT
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::KEY_0, ModifierFlag::FN,ConsumerKeyCode::VOLUME_MUTE
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::MINUS, ModifierFlag::FN,ConsumerKeyCode::VOLUME_DOWN
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::EQUAL, ModifierFlag::FN,ConsumerKeyCode::VOLUME_UP
-                </autogen>
-            </item>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::FN, ConsumerKeyCode::MUSIC_PREV
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::FN,ConsumerKeyCode::MUSIC_PLAY
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::FN,ConsumerKeyCode::MUSIC_NEXT
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::FN,ConsumerKeyCode::VOLUME_MUTE
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::MINUS, ModifierFlag::FN,ConsumerKeyCode::VOLUME_DOWN
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::FN,ConsumerKeyCode::VOLUME_UP
+            </autogen>
+        </item>
 
+        <item>
+            <name>Command_R to Fn</name>
             <item>
-                <name>Command_R to Fn</name>
-                <item>
-                    <name>Command_R + Shift_L + Delete to fn + Shift_L + Delete</name>
+                <name>Command_R + Shift_L + Delete to fn + Shift_L + Delete</name>
                 <identifier>com.15-cm.cmdR_to_fn</identifier>
                 <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
-                </item>
             </item>
         </item>
-        <!-- Layout for flico minila air END-->
-    </root>
+    </item>
+    <!-- Layout for flico minila air END-->
+</root>
