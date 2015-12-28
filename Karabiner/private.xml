@@ -110,6 +110,7 @@
         </item> -->
     <!-- Vim Emulator END -->
 
+
     <!-- Adjustment for external keyboard BEGIN -->
     <item>
         <name>Adjustment for external keyboard</name>
@@ -119,9 +120,10 @@
             <device_only>
                 DeviceVendor::CHERRY,DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <autogen>
-                __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
+                <!-- __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L -->
+                __KeyOverlaidModifier__ KeyCode::OPTION_L, KeyCode::VK_LAZY_COMMAND_L, KeyCode::OPTION_L
             </autogen>
-            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+            <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::VK_LAZY_OPTION_L, KeyCode::COMMAND_L</autogen>
         </item>
         <item>
             <name>Swap Option_R with Command_R</name>
