@@ -407,6 +407,14 @@
                 <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
             </item>
         </item>
+        <item>
+            <name>Command_R + F to Command_L + Control_R + F(for ShortCat)</name>
+                <identifier>com.15-cm.cmdR_f_to_cmdL_ctrlR_f</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::F, Modi
+                fierFlag::COMMAND_R, ModifierFlag::NONE, KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_R
+            </autogen>
+        </item>
     </item>
     <!-- Layout for flico minila air END-->
 </root>
