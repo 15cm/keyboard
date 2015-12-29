@@ -230,7 +230,7 @@
                     <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
                     <identifier>com.15-cm.switch_to_input_source_1st_minila</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                        __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
                 </item>
                 <item>
@@ -238,7 +238,7 @@
                     <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
                     <identifier>com.15-cm.switch_to_input_source_2nd_minila</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
+                        __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18
                     </autogen>
                 </item>
                 <item>
@@ -254,7 +254,7 @@
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
                     <identifier>com.15-cm.switch_to_input_source_1st</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
                 </item>
                 <item>
@@ -262,7 +262,7 @@
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
                     <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::F18, KeyCode::VK_WAIT_100MS
+                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,KeyCode::VK_WAIT_10MS KeyCode::F18
                     </autogen>
                 </item>
                 <item>
