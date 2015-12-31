@@ -85,8 +85,8 @@
                 </autogen>
             </item>
         <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <!-- <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only> -->
             <name>Command_L + Hyper + P/N to Page Up/Dn</name>
             <identifier>com.15-cm.cmdL_ctrlL_p_n_to_pg_u_d</identifier>
             <autogen>
@@ -95,6 +95,12 @@
             <autogen>
                 __KeyToKey__ KeyCode::N, ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_R, KeyCode::PAGEDOWN
             </autogen>
+        </item>
+        <item>
+            <name>Hyper + H/D to Delete/Forward_Delete</name>
+            <identifier>com.15-cm.hyper_h_d_to_delete_fDelete</identifier>
+            <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::DELETE</autogen>
+            <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
         </item>
         </item>
     </item>
@@ -262,7 +268,7 @@
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
                     <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,KeyCode::VK_WAIT_10MS KeyCode::F18
+                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,KeyCode::VK_WAIT_10MS, KeyCode::F18
                     </autogen>
                 </item>
                 <item>
@@ -407,6 +413,8 @@
             </item>
         </item>
         <item>
+            <name>Config for certain applications</name>
+        <item>
             <name>Command_R + F to Command_L + Control_R + F(for ShortCat)</name>
                 <identifier>com.15-cm.cmdR_f_to_cmdL_ctrlR_f</identifier>
             <autogen>
@@ -414,6 +422,15 @@
                 fierFlag::COMMAND_R, ModifierFlag::NONE, KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_R
             </autogen>
         </item>
+        <!-- <item>
+            <name>Command_L + ` to Option_L + `</name>
+                <identifier>com.15-cm.cmdL_backquote_to_optL_backquote</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L, KeyCode::BACKQUOTE, ModifierFlag::OPTION_L
+                __HoldingKeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L
+            </autogen>
+        </item> -->
+    </item>
     </item>
     <!-- Layout for flico minila air END-->
 </root>
