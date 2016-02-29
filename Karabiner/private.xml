@@ -53,7 +53,7 @@
                 <equal>com.apple.com.Terminal</equal>
                 <equal>com.google.Chrome</equal>
                 <equal>com.apple.dt.Xcode</equal>
-                <euqal>org.rstudio.RStudio</euqal>
+                <equal>org.rstudio.RStudio</equal>
                 <equal>com.happenapps.Quiver</equal>
                 <!-- <equal>com.happenapps.Quiver</equal> -->
             </appdef>
@@ -75,8 +75,8 @@
             </item>
             <item>
                 <name>Emacs binding(Hyper+B/F) for Left/Right</name>
-                <identifier>com.15-cm.emacs_binding_lr</identifier>
                 <not>VIMBINDAPP</not>
+                <identifier>com.15-cm.emacs_binding_lr</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_LEFT
                 </autogen>
@@ -98,6 +98,7 @@
         </item>
         <item>
             <name>Hyper + H/D to Delete/Forward_Delete</name>
+                <not>VIMBINDAPP</not>
             <identifier>com.15-cm.hyper_h_d_to_delete_fDelete</identifier>
             <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::DELETE</autogen>
             <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
@@ -317,7 +318,6 @@
             </autogen>
         </item>
 
-
         <item>
             <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
@@ -412,16 +412,17 @@
                 <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
             </item>
         </item>
+
         <item>
             <name>Config for certain applications</name>
-        <item>
-            <name>Command_R + F to Command_L + Control_R + F(for ShortCat)</name>
-                <identifier>com.15-cm.cmdR_f_to_cmdL_ctrlR_f</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::F, Modi
-                fierFlag::COMMAND_R, ModifierFlag::NONE, KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_R
-            </autogen>
-        </item>
+            <item>
+                <name>Command_R + F to F17(Eudic)</name>
+                    <identifier>com.15-cm.cmdR_f_to_F17</identifier>
+                <autogen>
+                    __KeyToKey__ KeyCode::F, Modi
+                    fierFlag::COMMAND_R, ModifierFlag::NONE, KeyCode::F17
+                </autogen>
+            </item>
         <!-- <item>
             <name>Command_L + ` to Option_L + `</name>
                 <identifier>com.15-cm.cmdL_backquote_to_optL_backquote</identifier>
@@ -430,7 +431,7 @@
                 __HoldingKeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L
             </autogen>
         </item> -->
-    </item>
+        </item>
     </item>
     <!-- Layout for flico minila air END-->
 </root>
