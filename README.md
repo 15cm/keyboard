@@ -1,4 +1,5 @@
 # Mac KeyBoard Configuration
+[How it looks](http://www.keyboard-layout-editor.com/#/gists/46614c15dc4edfb98667)
 
 ## Features
 
