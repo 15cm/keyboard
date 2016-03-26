@@ -57,6 +57,10 @@
                 <equal>com.happenapps.Quiver</equal>
                 <!-- <equal>com.happenapps.Quiver</equal> -->
             </appdef>
+            <appdef>
+                <appname>EmacsAlready</appname>
+                <equal>com.googlecode.iterm2</equal>
+            </appdef>
             <!-- editors define END -->
 
         </item>
@@ -65,6 +69,7 @@
             <name>Emacs Emulator</name>
             <item>
                 <name>Emacs binding(Hyper+P/N) for Up/Down</name>
+                <not>EmacsAlready</not>
                 <identifier>com.15-cm.emacs_binding_ud</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_UP
@@ -139,9 +144,9 @@
                 DeviceVendor::CHERRY,DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <autogen>
                 <!-- __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L -->
-                __KeyOverlaidModifier__ KeyCode::OPTION_L, KeyCode::VK_LAZY_COMMAND_L, KeyCode::OPTION_L
+                __KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L
             </autogen>
-            <autogen>__KeyOverlaidModifier__ KeyCode::COMMAND_L, KeyCode::VK_LAZY_OPTION_L, KeyCode::COMMAND_L</autogen>
+            <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L </autogen>
         </item>
         <item>
             <name>Swap Option_R with Command_R</name>
@@ -261,7 +266,8 @@
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
                     <identifier>com.15-cm.switch_to_input_source_1st</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
+                        __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+                        KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
                 </item>
                 <item>
@@ -269,7 +275,7 @@
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
                     <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
                     <autogen>
-                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,KeyCode::VK_WAIT_10MS, KeyCode::F18
+                        __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,KeyCode::VK_WAIT_50MS, KeyCode::F18
                     </autogen>
                 </item>
                 <item>
@@ -416,11 +422,11 @@
         <item>
             <name>Config for certain applications</name>
             <item>
-                <name>Command_R + F to F17(Eudic)</name>
-                    <identifier>com.15-cm.cmdR_f_to_F17</identifier>
+                <name>Command_L + Control_R + X to F17(Eudic)</name>
+                    <identifier>com.15-cm.cmdR_CtrlR_x_to_F17</identifier>
                 <autogen>
-                    __KeyToKey__ KeyCode::F, Modi
-                    fierFlag::COMMAND_R, ModifierFlag::NONE, KeyCode::F17
+                    __KeyToKey__ KeyCode::X, Modi
+                    fierFlag::COMMAND_L, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::F17
                 </autogen>
             </item>
         <!-- <item>
