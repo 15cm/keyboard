@@ -24,7 +24,7 @@
             <!-- F19 to Hyper BEGIN -->
             <item>
                 <name>F19(Caps Lock) to Escape or Hold for Hyper(Control_R)</name>
-                <identifier>com.15-cm.f19_hyper</identifier>
+                <identifier>15cm.net.f19_hyper</identifier>
                 <autogen>
                     __KeyOverlaidModifier__ KeyCode::F19, KeyCode::CONTROL_R, KeyCode::ESCAPE
                 </autogen>
@@ -34,7 +34,7 @@
             <!-- CONTROL_R to CapsLock BEGIN -->
             <item>
                 <name>Double press Shift_R to Capslock</name>
-                <identifier>com.15-cm.app_double_shiftR_to_capslock</identifier>
+                <identifier>15cm.net.app_double_shiftR_to_capslock</identifier>
                 <autogen>
                     __DoublePressModifier__ KeyCode::SHIFT_R, KeyCode::SHIFT_R, KeyCode::CAPSLOCK
                 </autogen>
@@ -58,7 +58,7 @@
                 <!-- <equal>com.happenapps.Quiver</equal> -->
             </appdef>
             <appdef>
-                <appname>EmacsAlready</appname>
+                <appname>NOEmacs</appname>
                 <equal>com.googlecode.iterm2</equal>
             </appdef>
             <!-- editors define END -->
@@ -69,8 +69,8 @@
             <name>Emacs Emulator</name>
             <item>
                 <name>Emacs binding(Hyper+P/N) for Up/Down</name>
-                <not>EmacsAlready</not>
-                <identifier>com.15-cm.emacs_binding_ud</identifier>
+                <not>NOEmacs</not>
+                <identifier>15cm.net.emacs_binding_ud</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_UP
                 </autogen>
@@ -81,7 +81,7 @@
             <item>
                 <name>Emacs binding(Hyper+B/F) for Left/Right</name>
                 <not>VIMBINDAPP</not>
-                <identifier>com.15-cm.emacs_binding_lr</identifier>
+                <identifier>15cm.net.emacs_binding_lr</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::CURSOR_LEFT
                 </autogen>
@@ -93,7 +93,7 @@
             <!-- <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only> -->
             <name>Command_L + Hyper + P/N to Page Up/Dn</name>
-            <identifier>com.15-cm.cmdL_ctrlL_p_n_to_pg_u_d</identifier>
+            <identifier>15cm.net.cmdL_ctrlL_p_n_to_pg_u_d</identifier>
             <autogen>
                 __KeyToKey__ KeyCode::P, ModifierFlag::COMMAND_L, ModifierFlag::CONTROL_R, KeyCode::PAGEUP
             </autogen>
@@ -104,7 +104,8 @@
         <item>
             <name>Hyper + H/D to Delete/Forward_Delete</name>
                 <not>VIMBINDAPP</not>
-            <identifier>com.15-cm.hyper_h_d_to_delete_fDelete</identifier>
+                <not>NOEmacs</not>
+            <identifier>15cm.net.hyper_h_d_to_delete_fDelete</identifier>
             <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::DELETE</autogen>
             <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
         </item>
@@ -116,7 +117,7 @@
             <name>Vim Emulation</name>
             <item>
                 <name>Command_R + h/j/k/l to Cursor Left/Down/Up/Right</name>
-                <identifier>com.15-cm.hyper_hjkl_for_cursor_ldur</identifier>
+                <identifier>15cm.net.hyper_hjkl_for_cursor_ldur</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::H, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
                 </autogen>
@@ -139,7 +140,7 @@
         <name>Adjustment for external keyboard</name>
         <item>
             <name>Swap Option_L with Command_L</name>
-            <identifier>com.15-cm.ex_swap_L_opt_cmd</identifier>
+            <identifier>15cm.net.ex_swap_L_opt_cmd</identifier>
             <device_only>
                 DeviceVendor::CHERRY,DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <autogen>
@@ -150,7 +151,7 @@
         </item>
         <item>
             <name>Swap Option_R with Command_R</name>
-            <identifier>com.15-cm.ex_swap_R_opt_cmd</identifier>
+            <identifier>15cm.net.ex_swap_R_opt_cmd</identifier>
             <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <autogen>
                 __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
@@ -160,7 +161,7 @@
 
         <item>
             <name>PC Application to Fn</name>
-            <identifier>com.15-cm.app_to_fn</identifier>
+            <identifier>15cm.net.app_to_fn</identifier>
             <device_only>DeviceVendor::CHERRY, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <autogen>
                 __KeyToKey__ KeyCode::PC_APPLICATION, KeyCode::FN
@@ -209,7 +210,7 @@
             <item>
                 <name>OPTION_R to swich between English and Chinese</name>
                 <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
-                <identifier>com.15-cm.cmdL_switch_en_zhs</identifier>
+                <identifier>15cm.net.cmdL_switch_en_zhs</identifier>
                 <block>
                     <inputsource_only>EN</inputsource_only>
                     <autogen>
@@ -230,7 +231,7 @@
                 <item>
                     <name>Control_L + Command_R + F11 to F18(F18: set as system hotkey to switch input source)</name>
                     <appendix>(This hotkey must be enabled as the following hotkeys are all based on F18, which is set as system shortcut to switch input source)</appendix>
-                    <identifier>com.15-cm.ctrl_l_command_r_f11_to_f18</identifier>
+                    <identifier>15cm.net.ctrl_l_command_r_f11_to_f18</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::F11, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
                     </autogen>
@@ -240,7 +241,7 @@
                 <item>
                     <name>Change input source to EN(1st) by COMMAND_R + A (For Minila Air)</name>
                     <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                    <identifier>com.15-cm.switch_to_input_source_1st_minila</identifier>
+                    <identifier>15cm.net.switch_to_input_source_1st_minila</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
                     </autogen>
@@ -248,7 +249,7 @@
                 <item>
                     <name>Change input source to input source 2nd by COMMAND_R + S (For Minila Air)</name>
                     <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                    <identifier>com.15-cm.switch_to_input_source_2nd_minila</identifier>
+                    <identifier>15cm.net.switch_to_input_source_2nd_minila</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18
                     </autogen>
@@ -256,7 +257,7 @@
                 <item>
                     <name>Change input source to input source 3rd by COMMAND_R + D (For Minila Air)</name>
                     <device_only>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-                    <identifier>com.15-cm.input_source_3rd_minila</identifier>
+                    <identifier>15cm.net.input_source_3rd_minila</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                     </autogen>
@@ -264,7 +265,7 @@
                 <item>
                     <name>Change input source to EN(1st) by OPTION_L + A (For other keyboard)</name>
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
-                    <identifier>com.15-cm.switch_to_input_source_1st</identifier>
+                    <identifier>15cm.net.switch_to_input_source_1st</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE,
                         KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
@@ -273,7 +274,7 @@
                 <item>
                     <name>Change input source to input source 2nd by OPTION_L + S (For other keyboard)</name>
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
-                    <identifier>com.15-cm.switch_to_input_source_2nd</identifier>
+                    <identifier>15cm.net.switch_to_input_source_2nd</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US,KeyCode::VK_WAIT_50MS, KeyCode::F18
                     </autogen>
@@ -281,7 +282,7 @@
                 <item>
                     <name>Change input source to input source 3rd by OPTION_L + D (For other keyboard)</name>
                     <device_not>DeviceVendor::FLICO,DeviceProduct::EXTERNAL_KEYBOARD</device_not>
-                    <identifier>com.15-cm.input_source_3rd</identifier>
+                    <identifier>15cm.net.input_source_3rd</identifier>
                     <autogen>
                         __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                     </autogen>
@@ -298,7 +299,7 @@
             <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <name>Backquote to Delete</name>
-            <identifier>com.15-cm.minila_backquote_to_delete</identifier>
+            <identifier>15cm.net.minila_backquote_to_delete</identifier>
             <autogen>
                 __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE
             </autogen>
@@ -308,7 +309,7 @@
             <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <name>Esc to Backqoute</name>
-            <identifier>com.15-cm.minila_esc_to_backquote</identifier>
+            <identifier>15cm.net.minila_esc_to_backquote</identifier>
             <autogen>
                 __KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE
             </autogen>
@@ -318,7 +319,7 @@
             <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <name>Space(FN_L and FN_R) to Command_R</name>
-            <identifier>com.15-cm.minila_space_to_commandR</identifier>
+            <identifier>15cm.net.minila_space_to_commandR</identifier>
             <autogen>
                 __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::COMMAND_R, KeyCode::SPACE
             </autogen>
@@ -328,7 +329,7 @@
             <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <name>Command_R + num to F1-F12</name>
-            <identifier>com.15-cm.minila_commandR_to_Fx</identifier>
+            <identifier>15cm.net.minila_commandR_to_Fx</identifier>
             <autogen>
                 __KeyToKey__ KeyCode::KEY_1, ModifierFlag::COMMAND_R, KeyCode::F1
             </autogen>
@@ -370,7 +371,7 @@
             <device_only>
                 DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
             <name>App to Fn</name>
-            <identifier>com.15-cm.app_num_to_media_control</identifier>
+            <identifier>15cm.net.app_num_to_media_control</identifier>
             <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::PC_APPLICATION</autogen>
             <autogen>
                 __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
@@ -414,7 +415,7 @@
             <name>Command_R to Fn</name>
             <item>
                 <name>Command_R + Shift_L + Delete to fn + Shift_L + Delete</name>
-                <identifier>com.15-cm.cmdR_to_fn</identifier>
+                <identifier>15cm.net.cmdR_to_fn</identifier>
                 <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
             </item>
         </item>
@@ -422,16 +423,16 @@
         <item>
             <name>Config for certain applications</name>
             <item>
-                <name>Command_L + Control_R + X to F17(Eudic)</name>
-                    <identifier>com.15-cm.cmdR_CtrlR_x_to_F17</identifier>
+                <name>Command_L + W to Ctrl + Q for tmux prefix</name>
+                    <identifier>15cm.net.CmdL_CtrlR_w_to_CtrlR_q</identifier>
                 <autogen>
-                    __KeyToKey__ KeyCode::X, Modi
-                    fierFlag::COMMAND_L, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::F17
+                    __KeyToKey__ KeyCode::W, Modi
+                    fierFlag::COMMAND_L, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::Q, ModifierFlag:: CONTROL_R
                 </autogen>
             </item>
         <!-- <item>
             <name>Command_L + ` to Option_L + `</name>
-                <identifier>com.15-cm.cmdL_backquote_to_optL_backquote</identifier>
+                <identifier>15cm.net.cmdL_backquote_to_optL_backquote</identifier>
             <autogen>
                 __KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L, KeyCode::BACKQUOTE, ModifierFlag::OPTION_L
                 __HoldingKeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L
