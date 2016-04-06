@@ -422,14 +422,14 @@
 
         <item>
             <name>Config for certain applications</name>
-            <item>
+            <!-- <item>
                 <name>Command_L + W to Ctrl + Q for tmux prefix</name>
                     <identifier>15cm.net.CmdL_CtrlR_w_to_CtrlR_q</identifier>
                 <autogen>
                     __KeyToKey__ KeyCode::W, Modi
                     fierFlag::COMMAND_L, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::Q, ModifierFlag:: CONTROL_R
                 </autogen>
-            </item>
+            </item> -->
         <!-- <item>
             <name>Command_L + ` to Option_L + `</name>
                 <identifier>15cm.net.cmdL_backquote_to_optL_backquote</identifier>
