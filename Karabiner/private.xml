@@ -31,7 +31,7 @@
             </item>
             <!-- F19 to Hyper END -->
 
-            <!-- Double Press Shift to CapsLock BEGIN -->
+            <!-- CONTROL_R to CapsLock BEGIN -->
             <item>
                 <name>Double press Shift_R to Capslock</name>
                 <identifier>15cm.net.app_double_shiftR_to_capslock</identifier>
@@ -39,7 +39,7 @@
                     __DoublePressModifier__ KeyCode::SHIFT_R, KeyCode::SHIFT_R, KeyCode::CAPSLOCK
                 </autogen>
             </item>
-            <!-- DF to CapsLock END -->
+            <!-- CONTROL_R to CapsLock END -->
 
             <!-- editors define BEGIN -->
             <appdef>
