@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <root>
-    <!-- define external keyboard BEGIN-->
+    <!-- define keyboard BEGIN-->
+    <devicevendordef>
+        <vendorname>MAC</vendorname>
+        <vendorid>0x0262</vendorid>
+    </devicevendordef>
     <devicevendordef>
         <vendorname>CHERRY</vendorname>
         <vendorid>0x046a</vendorid>
@@ -14,7 +18,18 @@
         <productid>0x0011</productid>
         <productid>0x8502</productid>
     </deviceproductdef>
-    <!-- define external keyboard END-->
+    <!-- define keyboard END-->
+    <!-- <item>
+        <name>Config for certain applications</name>
+        <item>
+            <device_only> DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Command_L doube press to F15 for Aflred Hotkey</name>
+            <identifier>15cm.net.CmdL_DoublePress_to_F15</identifier>
+            <autogen>
+                __DoublePressModifier__ KeyCode::OPTION_L, KeyCode::COMMAND_L, KeyCode::F16
+            </autogen>
+        </item>
+    </item> -->
     <item>
         <!--      Inspired by and adapted from Steve Losh's "Modern Space Cadet" post:      http://stevelosh.com/blog/2012/10/a-modern-space-cadet/#hyper    -->
         <name>Hyper Mode</name>
@@ -39,7 +54,7 @@
                     __DoublePressModifier__ KeyCode::SHIFT_R, KeyCode::SHIFT_R, KeyCode::CAPSLOCK
                 </autogen>
             </item>
-            <!-- DF to CapsLock END -->
+            <!-- Double Press Shift_R to CapsLock END -->
 
             <!-- editors define BEGIN -->
             <appdef>
@@ -90,8 +105,7 @@
                 </autogen>
             </item>
         <item>
-            <!-- <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only> -->
+            <!-- <device_only> DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only> -->
             <name>Command_L + Hyper + P/N to Page Up/Dn</name>
             <identifier>15cm.net.cmdL_ctrlL_p_n_to_pg_u_d</identifier>
             <autogen>
@@ -418,26 +432,6 @@
                 <identifier>15cm.net.cmdR_to_fn</identifier>
                 <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
             </item>
-        </item>
-
-        <item>
-            <name>Config for certain applications</name>
-            <!-- <item>
-                <name>Command_L + W to Ctrl + Q for tmux prefix</name>
-                    <identifier>15cm.net.CmdL_CtrlR_w_to_CtrlR_q</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::W, Modi
-                    fierFlag::COMMAND_L, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::Q, ModifierFlag:: CONTROL_R
-                </autogen>
-            </item> -->
-        <!-- <item>
-            <name>Command_L + ` to Option_L + `</name>
-                <identifier>15cm.net.cmdL_backquote_to_optL_backquote</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::BACKQUOTE, ModifierFlag::COMMAND_L, KeyCode::BACKQUOTE, ModifierFlag::OPTION_L
-                __HoldingKeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L
-            </autogen>
-        </item> -->
         </item>
     </item>
     <!-- Layout for flico minila air END-->
