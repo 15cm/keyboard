@@ -273,6 +273,9 @@
                             __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                         </autogen>
                         <autogen>
+                            __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
+                        </autogen>
+                        <autogen>
                             __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
                         </autogen>
                     </block>
@@ -283,6 +286,9 @@
                         </autogen>
                         <autogen>
                             __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                        </autogen>
+                        <autogen>
+                            __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
                         </autogen>
                     </block>
                 </item>
@@ -308,6 +314,9 @@
                             __KeyToKey__ KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                         </autogen>
                         <autogen>
+                            __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
+                        </autogen>
+                        <autogen>
                             __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::F18
                         </autogen>
                     </block>
@@ -318,6 +327,9 @@
                         </autogen>
                         <autogen>
                             __KeyToKey__ KeyCode::S, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                        </autogen>
+                        <autogen>
+                            __KeyToKey__ KeyCode::D, ModifierFlag::OPTION_L | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
                         </autogen>
                     </block>
                 </item>
