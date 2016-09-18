@@ -10,15 +10,14 @@
 
 ### Emacs Emulator
 
-- Hyper+P/N/B/F for Up/Down/Left/Right
+- Hyper + P/N/B/F for Up/Down/Left/Right
+- Hyper + Command_L + P/N to Page Up/Dn
+- Hyper + H/D to Delete/Forward_Delete
 
 ### Easily Change Input Source
 
-- Switch Input Method:
-    - Option_R to switch between English and Chinese (Disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin before enable this hotkey)
-
-- Specify Input Source: Command_R(For Minila Air)/Option_L(For Other Keyboard) + a/s/d to specify input source 1st/2nd/3rd
-
+- Specify Input Source: SUPER(For Minila Air)/Option_L(For Other Keyboard) + a/s/d to specify input source 1st/2nd/3rd
+HYPER
     __Attention: This feature is implemented by `Select next source in input menu` Shortcuts of OS X.
     Here I set it as F18(CMD_R + CTRL_L + F11 -> F18 in case of conflict).__
 
@@ -29,9 +28,9 @@
     __Attetion: This feature acts on specified external keyboard(Cherry 3494, Minila Air so far). Therefore you should obtain information about your external keyboard by EventViewer(launched from the menu bar item of karabiner) and modify the corresponding code.__
 
 ### Layout for Minila Air
-
-
-## Set up
+- Space to Space, hold for SUPER(VK Modifier)
+- SUPER + 1-12 to F1-F12
+- App + 1-12 for Media Control(Fn + F1-F12 for me)
 
 1. Change Caps Lock to F19(keycode: 80)
 

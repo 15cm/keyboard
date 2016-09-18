@@ -128,22 +128,6 @@
             <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::DELETE</autogen>
             <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
         </item>
-        <item>
-            <name>Hyper + Alt + F/B/N/P to Alt + Rigth/Left/Down/Up</name>
-            <identifier>15cm.net.hyper_alt_fbnp_to_rldu</identifier>
-            <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R,
-                ModifierFlag::OPTION_L, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
-            </autogen>
-            <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R,
-                ModifierFlag::OPTION_L, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
-            </autogen>
-            <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_R,
-                ModifierFlag::OPTION_L, KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L
-            </autogen>
-            <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R,
-                ModifierFlag::OPTION_L, KeyCode::CURSOR_UP, ModifierFlag::OPTION_L
-            </autogen>
-        </item>
         </item>
     </item>
 
@@ -359,24 +343,6 @@
             <appendix>It's annoying that we have to focus on what input source we are using now</appendix>
             <appendix>when switching language we type in.</appendix>
             <appendix>These hotkeys allow us to easily switch between or sepcify our input sources</appendix>
-            <!-- <item>
-                <name>OPTION_R to swich between English and Chinese</name>
-                <appendix>(You'd better disable 'shift to switch Chinese and English' in Baidu/Sougou Pinyin beforehand)</appendix>
-                <identifier>15cm.net.cmdL_switch_en_zhs</identifier>
-                <block>
-                    <inputsource_only>EN</inputsource_only>
-                    <autogen>
-                        __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R, KeyCode::F18
-                    </autogen>
-                </block>
-                <block>
-                    <inputsource_only>CHS</inputsource_only>
-                    <autogen>
-                        __KeyOverlaidModifier__ KeyCode::OPTION_R, KeyCode::VK_LAZY_OPTION_R,
-                        KeyCode::VK_CHANGE_INPUTSOURCE_MY_US, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18, KeyCode::VK_WAIT_50MS, KeyCode::VK_CHANGE_INPUTSOURCE_MY_US
-                    </autogen>
-                </block>
-            </item> -->
             <item>
                 <name>Specify Input Source</name>
                 <item>
