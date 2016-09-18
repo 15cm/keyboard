@@ -19,6 +19,11 @@
         <productid>0x8502</productid>
     </deviceproductdef>
     <!-- define keyboard END-->
+
+    <!-- define my modifier BEGIN -->
+    <modifierdef>MY_SUPER</modifierdef>
+    <!-- define my modifier END -->
+    
     <!-- <item>
         <name>Config for certain applications</name>
         <item>
@@ -123,31 +128,24 @@
             <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::DELETE</autogen>
             <autogen>__KeyToKey__ KeyCode::D, ModifierFlag::CONTROL_R, ModifierFlag::NONE, KeyCode::FORWARD_DELETE</autogen>
         </item>
+        <item>
+            <name>Hyper + Alt + F/B/N/P to Alt + Rigth/Left/Down/Up</name>
+            <identifier>15cm.net.hyper_alt_fbnp_to_rldu</identifier>
+            <autogen>__KeyToKey__ KeyCode::F, ModifierFlag::CONTROL_R,
+                ModifierFlag::OPTION_L, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::B, ModifierFlag::CONTROL_R,
+                ModifierFlag::OPTION_L, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::CONTROL_R,
+                ModifierFlag::OPTION_L, KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L
+            </autogen>
+            <autogen>__KeyToKey__ KeyCode::P, ModifierFlag::CONTROL_R,
+                ModifierFlag::OPTION_L, KeyCode::CURSOR_UP, ModifierFlag::OPTION_L
+            </autogen>
+        </item>
         </item>
     </item>
-
-    <!-- Vim Emulator BEGIN -->
-    <!-- <item>
-            <name>Vim Emulation</name>
-            <item>
-                <name>Command_R + h/j/k/l to Cursor Left/Down/Up/Right</name>
-                <identifier>15cm.net.hyper_hjkl_for_cursor_ldur</identifier>
-                <autogen>
-                    __KeyToKey__ KeyCode::H, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_LEFT
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::J, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_DOWN
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::K, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_UP
-                </autogen>
-                <autogen>
-                    __KeyToKey__ KeyCode::L, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::CURSOR_RIGHT
-                </autogen>
-            </item>
-        </item> -->
-    <!-- Vim Emulator END -->
-
 
     <!-- Adjustment for external keyboard BEGIN -->
     <item>
@@ -184,6 +182,146 @@
     </item>
     <!-- Adjustment for external keyboard END -->
 
+    <!-- Layout for flico minila air BEGIN-->
+    <item>
+        <name>Layout for Minila Air</name>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Backquote to Delete</name>
+            <identifier>15cm.net.minila_backquote_to_delete</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE
+            </autogen>
+        </item>
+
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Esc to Backqoute</name>
+            <identifier>15cm.net.minila_esc_to_backquote</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE
+            </autogen>
+        </item>
+
+        <item>
+          <device_only>
+            DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD
+          </device_only>
+          <name>Option_R to Command_R</name>
+          <identifier>15cm.net.option_r_to_command_r</identifier>
+          <autogen>
+            __KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R
+          </autogen>
+        </item>
+
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Space(FN_L and FN_R) to Super</name>
+            <identifier>15cm.net.minila_space_to_super</identifier>
+            <autogen>
+                __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::VK_MODIFIER_MY_SUPER, KeyCode::SPACE
+            </autogen>
+        </item>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>Command_R + num to F1-F12</name>
+            <identifier>15cm.net.minila_commandR_to_Fx</identifier>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::MY_SUPER, KeyCode::F1
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::MY_SUPER, KeyCode::F2
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::MY_SUPER, KeyCode::F3
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::MY_SUPER, KeyCode::F4
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::MY_SUPER, KeyCode::F5
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::MY_SUPER, KeyCode::F6
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::MY_SUPER, KeyCode::F7
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::MY_SUPER, KeyCode::F8
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::MY_SUPER, KeyCode::F9
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::MY_SUPER, KeyCode::F10
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::MINUS, ModifierFlag::MY_SUPER, KeyCode::F11
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::MY_SUPER, KeyCode::F12
+            </autogen>
+        </item>
+        <item>
+            <device_only>
+                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
+            <name>App to Fn</name>
+            <identifier>15cm.net.app_num_to_media_control</identifier>
+            <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::PC_APPLICATION</autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::FN,ConsumerKeyCode::BRIGHTNESS_UP
+            </autogen>
+            <!-- <autogen>
+                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::FN, ConsumerKeyCode::EXPOSE_ALL
+            </autogen> -->
+            <!-- <autogen>
+                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::FN, ConsumerKeyCode::LAUNCHPAD
+            </autogen> -->
+            <!-- <autogen>
+                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::FN, ConsumerKeyCode::KEYBOARDLIGHT_LOW
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::FN, ConsumberKeyCode::KEYBOARDLIGHT_HIGH
+            </autogen> -->
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::FN, ConsumerKeyCode::MUSIC_PREV
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::FN,ConsumerKeyCode::MUSIC_PLAY
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::FN,ConsumerKeyCode::MUSIC_NEXT
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::FN,ConsumerKeyCode::VOLUME_MUTE
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::MINUS, ModifierFlag::FN,ConsumerKeyCode::VOLUME_DOWN
+            </autogen>
+            <autogen>
+                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::FN,ConsumerKeyCode::VOLUME_UP
+            </autogen>
+        </item>
+
+        <item>
+            <name>Command_R to Fn</name>
+            <item>
+                <name>Command_R + Shift_L + Delete to fn + Shift_L + Delete</name>
+                <identifier>15cm.net.cmdR_to_fn</identifier>
+                <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::MY_SUPER, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
+            </item>
+        </item>
+    </item>
+    <!-- Layout for flico minila air END-->
+    
      <!--Specify input source by Option_L BEGIN-->
      <!--define input source BEGIN-->
     <inputsourcedef>
@@ -258,37 +396,37 @@
                     <block>
                         <inputsource_only>EN</inputsource_only>
                         <autogen>
-                            __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE,  KeyCode::VK_WAIT_10MS
+                            __KeyToKey__ KeyCode::A, ModifierFlag::MY_SUPER | ModifierFlag::NONE,  KeyCode::VK_WAIT_10MS
                         </autogen>
                         <autogen>
-                            __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
+                            __KeyToKey__ KeyCode::S, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::F18
                         </autogen>
                         <autogen>
-                            __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18,KeyCode::VK_WAIT_10MS, KeyCode::F18
+                            __KeyToKey__ KeyCode::D, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::F18,KeyCode::VK_WAIT_10MS, KeyCode::F18
                         </autogen>
                     </block>
                     <block>
                         <inputsource_only>CHS</inputsource_only>
                         <autogen>
-                            __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                            __KeyToKey__ KeyCode::A, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                         </autogen>
                         <autogen>
-                            __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
+                            __KeyToKey__ KeyCode::S, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
                         </autogen>
                         <autogen>
-                            __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
+                            __KeyToKey__ KeyCode::D, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::F18
                         </autogen>
                     </block>
                     <block>
                         <inputsource_only>JP</inputsource_only>
                         <autogen>
-                            __KeyToKey__ KeyCode::A, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18
+                            __KeyToKey__ KeyCode::A, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::F18
                         </autogen>
                         <autogen>
-                            __KeyToKey__ KeyCode::S, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
+                            __KeyToKey__ KeyCode::S, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::F18, KeyCode::VK_WAIT_10MS, KeyCode::F18
                         </autogen>
                         <autogen>
-                            __KeyToKey__ KeyCode::D, ModifierFlag::COMMAND_R | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
+                            __KeyToKey__ KeyCode::D, ModifierFlag::MY_SUPER | ModifierFlag::NONE, KeyCode::VK_WAIT_10MS
                         </autogen>
                     </block>
                 </item>
@@ -338,142 +476,4 @@
         </item>
     </item>
 
-    <!-- Layout for flico minila air BEGIN-->
-    <item>
-        <name>Layout for Minila Air</name>
-        <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-            <name>Backquote to Delete</name>
-            <identifier>15cm.net.minila_backquote_to_delete</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::BACKQUOTE, KeyCode::DELETE
-            </autogen>
-        </item>
-
-        <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-            <name>Esc to Backqoute</name>
-            <identifier>15cm.net.minila_esc_to_backquote</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::ESCAPE, KeyCode::BACKQUOTE
-            </autogen>
-        </item>
-
-        <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-            <name>Space(FN_L and FN_R) to Command_R</name>
-            <identifier>15cm.net.minila_space_to_commandR</identifier>
-            <autogen>
-                __KeyOverlaidModifier__ KeyCode::SPACE, KeyCode::COMMAND_R, KeyCode::SPACE
-            </autogen>
-        </item>
-        <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-            <name>Command_R + F to Opt_L + F</name>
-            <identifier>15cm.net.minila_cmdR_f_to_optL_f</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::F, ModifierFlag::COMMAND_R, KeyCode::F, ModifierFlag::OPTION_L
-            </autogen>
-        </item>
-
-        <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-            <name>Command_R + num to F1-F12</name>
-            <identifier>15cm.net.minila_commandR_to_Fx</identifier>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::COMMAND_R, KeyCode::F1
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::COMMAND_R, KeyCode::F2
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::COMMAND_R, KeyCode::F3
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::COMMAND_R, KeyCode::F4
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::COMMAND_R, KeyCode::F5
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::COMMAND_R, KeyCode::F6
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::COMMAND_R, KeyCode::F7
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::COMMAND_R, KeyCode::F8
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::COMMAND_R, KeyCode::F9
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::COMMAND_R, KeyCode::F10
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::MINUS, ModifierFlag::COMMAND_R, KeyCode::F11
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::COMMAND_R, KeyCode::F12
-            </autogen>
-        </item>
-        <item>
-            <device_only>
-                DeviceVendor::FLICO, DeviceProduct::EXTERNAL_KEYBOARD</device_only>
-            <name>App to Fn</name>
-            <identifier>15cm.net.app_num_to_media_control</identifier>
-            <autogen>__KeyOverlaidModifier__ KeyCode::PC_APPLICATION, KeyCode::FN, KeyCode::PC_APPLICATION</autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_1, ModifierFlag::FN, ModifierFlag::NONE, ConsumerKeyCode::BRIGHTNESS_DOWN
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_2, ModifierFlag::FN,ConsumerKeyCode::BRIGHTNESS_UP
-            </autogen>
-            <!-- <autogen>
-                __KeyToKey__ KeyCode::KEY_3, ModifierFlag::FN, ConsumerKeyCode::EXPOSE_ALL
-            </autogen> -->
-            <!-- <autogen>
-                __KeyToKey__ KeyCode::KEY_4, ModifierFlag::FN, ConsumerKeyCode::LAUNCHPAD
-            </autogen> -->
-            <!-- <autogen>
-                __KeyToKey__ KeyCode::KEY_5, ModifierFlag::FN, ConsumerKeyCode::KEYBOARDLIGHT_LOW
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_6, ModifierFlag::FN, ConsumberKeyCode::KEYBOARDLIGHT_HIGH
-            </autogen> -->
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_7, ModifierFlag::FN, ConsumerKeyCode::MUSIC_PREV
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_8, ModifierFlag::FN,ConsumerKeyCode::MUSIC_PLAY
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_9, ModifierFlag::FN,ConsumerKeyCode::MUSIC_NEXT
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::KEY_0, ModifierFlag::FN,ConsumerKeyCode::VOLUME_MUTE
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::MINUS, ModifierFlag::FN,ConsumerKeyCode::VOLUME_DOWN
-            </autogen>
-            <autogen>
-                __KeyToKey__ KeyCode::EQUAL, ModifierFlag::FN,ConsumerKeyCode::VOLUME_UP
-            </autogen>
-        </item>
-
-        <item>
-            <name>Command_R to Fn</name>
-            <item>
-                <name>Command_R + Shift_L + Delete to fn + Shift_L + Delete</name>
-                <identifier>15cm.net.cmdR_to_fn</identifier>
-                <autogen>__KeyToKey__ KeyCode::DELETE, ModifierFlag::COMMAND_R, ModifierFlag::SHIFT_L, KeyCode::DELETE, ModifierFlag::FN, ModifierFlag::SHIFT_L</autogen>
-            </item>
-        </item>
-    </item>
-    <!-- Layout for flico minila air END-->
 </root>
