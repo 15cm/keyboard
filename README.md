@@ -1,7 +1,8 @@
 # Mac KeyBoard Configuration (Deprecated)
 
 [How it looks](http://www.keyboard-layout-editor.com/#/gists/46614c15dc4edfb98667)
-__Since karabiner doesn't work on macOS Sierra, I have migrated to [Hammerspoon](https://github.com/Hammerspoon/hammerspoon) and you can see my config [here](https://github.com/15cm/.hammerspoon)__
+
+__Moved to__ [dotfiles](https://github.com/15cm/dotfiles/tree/master/.config/karabiner)
 
 ## Features
 
