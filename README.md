@@ -1,9 +1,8 @@
 # Mac KeyBoard Configuration (Deprecated)
 
+__This repo is deprecated. It has been moved to__ [dotfiles](https://github.com/15cm/dotfiles/tree/master/.config/karabiner)
+
 [How it looks](http://www.keyboard-layout-editor.com/#/gists/46614c15dc4edfb98667)
-
-__Moved to__ [dotfiles](https://github.com/15cm/dotfiles/tree/master/.config/karabiner)
-
 ## Features
 
 ### Caps Lock to Hyper Key
